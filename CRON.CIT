@@ -1,0 +1,44 @@
+ Citadel cron file
+
+  A cron entry will be executed when the BBS has the time. You can
+ define when is a valid time to do it.
+  After do you tell it a) what to do, b) an argument. SHELL_1 will
+ execute a shell with the command in the quotes. (note that a '@' as
+ the first char will cause citadel not to clear the screen)
+  NETWORK will cause the bbs to try to call out to another node.
+  A character before the # in each line of an entry will cause it to be
+ discarded.
+  #DAYS is the days it can be executed.
+  #HOURS is the hours it can be executed.
+			This can be in the form of:
+					 7:45-17 19:15-22:45 1 2:15
+  #REDO_TIME is the minutes it has to wait before it can redo a command
+    (if sucessful)
+  #RETRY_TIME is the minutes before it will retry after a failed attempt
+  (NOTE: putting a space before the # will remark that entry out)
+
+ --------------------------------------------------------------------------
+
+  # Network with Centauri's Place
+#DO 						NETWORK 				"Centauri's Place"
+#HOURS          ANY
+#DAYS           ANY
+#REDO_TIME			120
+#RETRY_TIME 		30
+
+ # Update the statistics every hour.
+#DO 						SHELL_1 				"@$?statfile"
+#HOURS          ANY
+#DAYS           ANY
+#REDO_TIME      720
+#RETRY_TIME     0
+
+ # Create an updated roomlist.lst in \cit\file every 12 hours
+#DO 						SHELL_1 				"@$?roomlist"
+#HOURS          ANY
+#DAYS           ANY
+#REDO_TIME      720
+#RETRY_TIME     0
+
+ ==========================================================================
+

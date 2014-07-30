@@ -1,0 +1,59 @@
+
+		       2ANSI Music0
+
+ The Capabilites for ANSI Music and sound effects make for some interesting
+ messages.  The SysOp has provided a maximum number of messages per visit
+ that may have sound.  If you try to enter Music or Sound and the system
+ beeps, it is for one of the following reasons:
+ 1) 	You have exceeded the maximum number of sound-containing messages.
+ 2) 	You did not Enter an M,S or E after the ^B (control B).
+ 3) 	You do not have sound enabled in your configuration.
+
+	 To enter a Musical Score:
+		 Type ^BM
+		 then the Octave, note length, and notes.
+		 Type ^BE
+
+	 To enter a sound effect:
+		 Type ^BS
+		 then a sequence of frequencys and durations
+		 Type ^BE
+
+												2Music Syntax0
+
+ 2A-G0[#,+,-]     A-G are notes. # or + following a note produces a sharp.
+                - produces a flat.
+ 2L0(n)           Sets the length of each note. L4 is a quarter note, L1 is
+                a whole note. n may be from 1 to 64. Length may also follow
+                a note.  C#8 is C Sharp as an eigth note.
+ 2O0              Octave O sets the current octave. There are 7 octaves
+                (0 through 6). Default is 4. Middle C is at the beginning
+                of octave 3.
+ 2P0              Pause (like a note only no sound - known as a rest)
+ 2T0(n)           Tempo. T sets the number of L4s in a minute.  The default
+                tempo is 120 and may range from 32 to 255.
+ 2.0(period)      A period after a note increases the playing time of the
+                note by 3/2 times the period determined by L (length of the
+                note) times T (tempo).  Multiple periods can appear after
+                a note and the playing time is scaled accordingly.For
+                example, A. will cause the note A to play one and a half
+                times the playing time determined by L (length of the note)
+                times T (the tempo); two periods placed after the A (A..)
+                will cause the note to be played at 9/4 times its ascribed
+                value; an A with three periods (A...) at 27/8, etc.
+
+ 2>n0             A greater-than symbol preceding the note n plays the note
+                in the next higher octave.
+ 2<n0             A less-than symbol preceding the note n plays the note
+                in the next lower octave.
+
+
+  ALL SOUND NOTES MUST BE IN UPPER CASE!!! This is critical to the sucess of
+  your sound effect or music.
+
+			     2Sound Effect Syntax0
+
+ 2F0n             Frequency where n is a number between 20 and 32767.
+ 2D0n             Duration where n is a millisecond count (1000 is 1 second)
+
+

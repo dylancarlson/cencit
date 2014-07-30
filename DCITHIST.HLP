@@ -1,0 +1,226 @@
+ 
+             THE KNOWN HISTORY OF DRAGON'S CITADEL (DRAGCIT)
+              
+                          By Peter Torkelson
+                    (a.k.a. The Dragon and Joo-Sama)
+                          Author of DragCit
+                          
+                          
+                            Introduction
+                          
+        Dragon's Citadel (hereafter known as DragCit) first came into 
+    being sometime early '87, but was not distributed until about
+    November of that year. 
+     
+        DragCit was based on Citadel source code. Citadel was writen
+    int December of '81 by a man using the psudonym "Cynbe ru Taren".
+    Many people touched on this software since then. 
+     
+        Citadel in the Seattle area generaly suffered from political
+    nonsence. It still does. DragCit was and is no exception to this.
+    Some of its history is not fit for little children, I do not
+    include the details of these events wich are best left undocumented.
+    
+        Parts of the following is quoted from other history files. See
+    the end of this file for a list.                         
+    
+    
+                            Early Citadel
+                            
+        Citadel's direct predecessor was an Adventure program named 
+    "DanDe.pas" that existed on a University of Washington computer 
+    system. Very similar to the Zork series of games, DanDe.pas's 
+    innovation that carried over to Citadel was the ability to leave 
+    messages on the "walls" of rooms; the messages functioned to prove
+    that the author of the message had actually made it to the room, 
+    some of which were hard to find, thus according status to the finders.
+
+        The concept proved so popular that DanDe.pas was eventually 
+    banned from the computer system; such are the rewards of being the 
+    most popular program on line!
+
+        The original author of Citadel was a gentleman who used the alias 
+    "Cynbe ru Taren".  He borrowed the concept of "rooms" from DanDe.pas 
+    as a reaction to the systems that were currently available -- linear 
+    systems that supported one single list of messages to read, which 
+    could only be read forward and backward.  Recognizing that it was 
+    the design of such systems that encouraged discussions that tended 
+    to leapfrog and thus become fragmented, he designed Citadel as a 
+    collection of "rooms", a familiar metaphor to 99% of civilization, 
+    and provided several ways of easily accessing messages. The room 
+    concept provided a convenient, understandable method for sensibly
+    separating discussions.
+
+        To this strong concept he added a consistent command structure 
+    which featured mnemonic single stroke commands available for the 
+    most popular and safest commands. The more obscure, dangerous, or
+    simply unused commands were hidden from the fingers of unknowing 
+    novices by allowing access to them through the use of a "command 
+    prefix" -- i.e., typing a '.' would allow access to the advanced 
+    commands that users would not need as single stroke commands.
+
+        Cynbe wrote the original Citadel program in December of 1980, 
+    and left it running over the holiday weekend - to find many 
+    favorable comments from the users who'd found it.
+    
+                               - * -
+        
+        What follows this is a description of how CrT's node fell to 
+    a hardware problem, and how eventualy a "BBS War" refered to as
+    the "Suggar Bunny Wars" caused CrT to leave BBSing forever. As 
+    most of the people involved will not speak about what happend,
+    are not avalible, and that those who do give only partial or 
+    biased views, it is realy unclear what realy happened. The 
+    results, however, forever changed Citadel history.
+    
+    
+                            Citadel Spreads
+                            
+        CrT, as his last act, gave his latest, untested citadel version
+    2.0 source code to T'an T'u (Bruce King). From here Citadel spread
+    to many places on the west coast, the east, and the midwest. Many,
+    many citadels spawned from this. The west coast was often more 
+    radical in its changes, and the midwest and east less so.
+     
+        The two main threads of Citadel that affected DragCit were David
+    Bonn's Stonehenge and Hue A White's (HAW) Cit-86.
+    
+        Stonehenge implemented two features that radicly changed the way
+    other Seattle citadels would look. These features were Halls and 
+    Groups. Also notable things were Twit users and Aides. While DragCit 
+    never realy took code from Stonehenge it's user interface is based off
+
+    Henges.
+    
+        Cit-86 was the source code that was eventualy to beacome DragCit.
+    Some time around '85 or '86 The Gremlin was unhappy with David Bonn
+    for selling Stonehenge since it was baised off Citadel source code,
+    wich was, by tradition, public domain. So he contacted HAW and got 
+    a copy of his curent source code.
+
+                               GremCit
+    
+        That version of Cit-86 looked very little like Stonehenge, and
+    Gremlin started a program of cloning Stonehenge. This was taken to
+    the point of removing Cit-86 features (such as UnGoto and Networking) 
+  
+    so that it would be more like Stonehenge. I worked with him, mostly
+    giving advice and designs (based on my work on Titan, a BASIC room
+    system wich had most of Henges features.. even if it was perhaps the
+    most unreliable BBS ever written (for the Atari 8-bit)). During this
+    time I was promised source code if I ever wanted it. 
+        
+        Early '87 I got access to a computer and took him up on that 
+    offer, and began adding features wanted by the sysop of Dark Tower,
+    whose computer I was using.
+    
+    
+                                War!
+                                
+        Shortly after I started work on Citadel myself, a battle erupted
+    between a number of the people 'important' in the GremCit social
+    structure. I and Gremlin were on oposing sides of this argument wich
+    quickly exploded to a size which perhaps rivals the Suggar Bunny Wars.
+    
+        What happened? Who was at fault? Whats the dirt?
+         
+        To be honest I can't realy say. I look at all the storys I have 
+    been told, and all that I know.. and I can't really say anymore.
+    Things were attributed to me that I know I never did, and I suspect
+    now that the same was true of 'them'. What it comes down to is there
+    is no clear picture of what really happened. Perhaps this is why
+    we may never know what happened with the war that ended CrT's 
+    involvment. 
+     
+        The results are clear however. At the end of '87 DragCit was 
+    released as an alternative to GremCit. At this time most GremCit
+    development had halted and DragCit, over the period of a year,
+    almost completly replaced GremCit.
+        
+    
+                            DragCit Grows
+                            
+        During '88 I started working with Ray Johnson and Joe Broxson.
+    With our care DragCit grew, in both features and memory usage. 
+    At this time DragCit plays catchup with GremCit and Henge, eventually
+    implementing all the useful features of both systems, and expanding
+    on them. Of the major features incorporated there was: Networking,
+    like but unlike henges, external protocols, agan like but unlike 
+    GremCits. 
+    
+        Features like Batch up/downloads, limited ANSI support, and
+    a lot of minor features and changes made DragCit very popular in    
+    Seattle. It also stared to spread to CA, TX, D.C., OR, and other 
+    places.
+    
+    
+                           DragCit Splits
+                           
+        During '?? there were increasing frictions between myself and
+    Ray over the direction of Citadel development. This would have
+    caused us to split eventually, and this was encoraged by other events.
+    Joe Broxson, tring to stay out of it, eventualy dropped out of the
+    BBS comunity.
+     
+        This caused the birth of TurboCit as a seprate branch of DragCit.
+    TurboCit aimed itself more at technical systems, enhancing the file
+    system and more support for IBM extended characters and ANSI. DragCit 
+    moved in a more general direction, but eventually has come back to
+    those areas. 
+     
+        The first source release occured about the same time, spwaning all
+    sorts of Drag/TurboCit decendants. There are about 7 or 8 active as of
+    this writing (Feb '91).
+     
+        At this time most of the nonseattle nodes switch to TurboCit. Most
+    of the seattle nodes stay with DragCit, to later change to the various
+    local decendants, leaving a core of DragCits. DragCit also spread 
+    south within puget sound establishing systems in Tacoma and Olympia.
+    
+    
+                        DragCit Today (Feb '91)
+                        
+        Today DragCits are either 3.11.02d systems, or 3.12 alpha test
+    sites. I plan on having 3.12.00d be the final release of DragCit, at
+    this time starting a new BBS program. Citadel's design makes impossible
+    a number of features I would like to support, such as multi-user
+    abilities. For this reason I plan to start from scratch.
+    
+    
+                         DragCit source code.
+                         
+        DragCit source code has been avalible for some time now. The 
+    source code for released version are distributed at DCS3xxxx.ZIP.
+    Curently the most recent source code released is for the 3.11.02d
+    release of DragCit. It is not my policy to release Alpha Test 
+    source code. I feel that this would create unstable descendants of
+    DragCit. I do however give out my source to other developers 
+    from time to time to help them add things wich I have done. (no
+    sense reinventing the wheel.) Few people have asked for Alpha
+    source code however.
+    
+    
+                        Credits to Programmers
+                        
+        The folowing people have, generally in this order, worked
+    on the code wich became DragCit:
+    
+        Cynbe ru Taren                
+        David Mitchel
+        Bruce King/T'an T'u
+        Maher Maso, Caren Park, and Kerry Kyes
+        Hue Sr. and Hue Jr.
+        The Gremlin
+        The Dragon/Joo-Sama, Ray Johnson, and Joe Broxson
+        
+        
+                      Credits to the Historians
+                      
+        The HISTORY.HLP file of Polaris Citadel, courtesy of T'an T'u    
+        The HISTORY.HLP file of MorningStar Keep, courtesy of Brian Riley
+        The HISTORY.DOC file that came with the original installation 
+                             of Citadel in the Twin City area.
+        THE CITADEL.HST by Hue, Jr., 86May09
+        And my senile memories.
+
+

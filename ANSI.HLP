@@ -1,0 +1,39 @@
+0 2HELP ANSI0
+
+  ANSI can be turned on and off with the '~' key or in the .EC enter
+configuration menu.  If your terminal does not support ANSI this will
+cause extra characters to be displayed, at least. What it will do is make
+room prompts inverse, message headers bold and let you see different colors
+in the messages where users have inserted TurboCit's special ESC sequences.
+  The Escape sequence starts with a CTRL-A and then a number (0-4) or a
+letter (a-h or A-H).  These are converted to the ANSI equivalent when the
+code is sent over the modem.
+
+ What it does:                 What it looks like:
+ ^A0 -- NORMAL                 0Normal0
+ ^A1 -- BLINK                  1Blinking0
+ ^A2 -- REVERSE (inverse)      2Inverted0
+ ^A3 -- BOLD (highlight)       3Boldface0
+ ^A4 -- UNDERLINE              4Underline0
+
+ To get a bright color, use BOLD before setting the color value.
+
+          Foreground                         Background
+          ÄÄÄÄÄÄÄÄÄÄ                         ÄÄÄÄÄÄÄÄÄÄ
+  ^Aa  BLACK     ^Ae  BLUE           ^AA  BLACK     ^AE  BLUE
+  ^Ab  RED       ^Af  MAGENTA        ^AB  RED       ^AF  MAGENTA
+  ^Ac  GREEN     ^Ag  CYAN           ^AC  GREEN     ^AG  CYAN
+  ^Ad  YELLOW    ^Ah  WHITE          ^AD  YELLOW    ^AH  WHITE
+
+           hNormal Colors      3Bold Colors0
+ Foreground   abcdefgh          abcdefgh
+             ÚÄÄÄÄÄÄÄÄ         ÚÄÄÄÄÄÄÄÄ
+ Background A³Aaabbccddeeffgghh0        A³3Aaabbccddeeffgghh0
+            B³Baabbccddeeffgghh0        B³3Baabbccddeeffgghh0
+            C³Caabbccddeeffgghh0        C³3Caabbccddeeffgghh0
+            D³Daabbccddeeffgghh0        D³3Daabbccddeeffgghh0
+            E³Eaabbccddeeffgghh0        E³3Eaabbccddeeffgghh0
+            F³Faabbccddeeffgghh0        F³3Faabbccddeeffgghh0
+            G³Gaabbccddeeffgghh0        G³3Gaabbccddeeffgghh0
+            H³Haabbccddeeffgghh0        H³3Haabbccddeeffgghh0
+

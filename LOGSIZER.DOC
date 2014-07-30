@@ -1,0 +1,107 @@
+
+                                LogSizer
+                         A Utility for Citadel
+
+            Copyright (c) 1991          Centauri Enterprises
+
+
+       This program is provided as is.  No warranty, expressed or
+     implied, is offered.  Use at your own risk.  This document must
+     accompany all copies of this program.  All other rights reserved.
+     Prices and specifications subject to change without notice.
+
+       Any commercial or business use of this program requires prior
+     registration.
+
+
+                                 
+                              Introduction
+
+        I originally wrote this program because once a user log is created 
+     there is no way to make it smaller except for one very drastic measure.
+     Destroying the log and start over!   That is, until now.
+
+
+                                 Usage
+
+        This program will read your current log size defined in config.cit 
+     and begin reading the userlog data.  It will then sort the entries by 
+     call number (the same order users show in .Read Userlog).  It will 
+     inform you of total log size, total number of valid log entries and 
+     total of those that are permanent entries. You will be asked to 
+     provide the new log size.  It cannot be the same as the current size 
+     or less than the total number of permanent users. If you are 
+     downsizing, the program will begin displaying the user names, call 
+     number and special flags (Aide, Unlisted, Permanent, Sysop, Node). At 
+     the point where you specified the new log size, there will be a break 
+     in the list and you will be informed that the rest of the entries will 
+     be purged (deleted).  The list will continue to the end. You will be 
+     asked if this is ok.   This gives you a chance to go back into your 
+     Citadel and make changes. You may have seen names that you want to 
+     make permanent so they do not get purged.  You may also have seen 
+     names that you wish to remove permanent status. Once you enter 'y' to 
+     the "Is this ok? (y/n) " question,  the program writes the data to 
+     disk and forces re-configuration of the Citadel.  You are also told to 
+     edit the config.cit file and put the new log size in the entry marked 
+     #MAXLOGTAB.
+        
+        DO NOT FORGET to edit config.cit!  It will insure the success of
+     your new log size.
+
+
+
+                                 - 1 -
+
+
+
+
+                              Registration
+
+
+       LogSizer is not a free, or public domain program, it is copyrighted
+     by the author.  LogSizer is being marketed as shareware.  If you find
+     it useful, please register it.  This will encourage the author to
+     enhance this program, and create other useful tools.  The author
+     grants you a license to use LogSizer for a reasonable trial period.
+     You make make as many copies as you like, and distribute these
+     copies for the purpose of trial of this software.  You may not
+     charge a fee of any kind for this software, it's distribution or
+     handling.  This program may not be sold as part of another
+     product without prior written consent of the author.
+
+       If you find this program has value to you, register it by
+     sending $5.00, along with your name, address, telephone number,
+     and E-Mail addresses to the address below.  Please include the
+     name and version of the program you are registering.  You will
+     receive notices of new versions, and other products from Centauri
+     Enterprises, as well as limited technical support via our
+     electronic mail services for a period of 3 months.
+
+       Please E-Mail your comments to me.  I can be reached at:
+
+       DragCit Net:   Centauri @ Centauri's Place
+
+       Or write:
+
+       Brad L. Johnson
+       Centauri Enterprises
+       7942 Fall Creek Rd #302
+       Dublin, Ca 94568
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 - 2 -

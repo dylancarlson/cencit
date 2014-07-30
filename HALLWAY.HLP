@@ -1,0 +1,36 @@
+  HELP HALLWAY
+
+  Hallways are sets of rooms.
+  They are analogous to Floors on Minibin-type systems, but with important
+differences:
+  (1)  A room may appear in more than one hallway.
+  (2)  You may enter a hallway only from certain rooms,
+       these rooms are called windows.
+
+  Commands to manipulate hallways:
+
+  .EH  -- Enter Hallway.
+  .RH  -- Read Hallways.
+  .KW  -- Know Window Rooms.
+  >    -- Next Hall.
+  <    -- Previous Hall.
+
+  Enter Hallway lets you select a hallway by name.  The hallway must
+be one that is accessible from the current room.
+
+  Read Hallways lists hallways accessible from the room you are in.
+
+  Known Windows shows window rooms giving access to other halls.
+
+  The Next and Previous Hallway commands are a quick and easy way to switch
+between hallways.  They will only reach hallways accessible from the
+current room.
+
+  Only the sysop can create hallways, and aide-privilege people can
+add or remove rooms from them.
+
+  Related Topics
+
+  .h ROOM
+
+

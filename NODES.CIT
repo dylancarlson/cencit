@@ -1,0 +1,53 @@
+ #NODE           "Nodename"   "Region"
+ #PHONE          "phone #"
+ #BAUD           2400                    /* baud rate                        */
+ #DIAL_TIMEOUT   30                      /* timeout on dial                  */
+ #REDIAL         3                       /* times to redial                  */
+ #LOGIN      W "00" S " " W " " S "s" W "tials:" S "init;pass\r"
+ #WAIT_TIMEOUT   20                      /* wait on timeout                  */
+ #PROTOCOL       "Zmodem"                /* wait on protocol                 */
+ #MAIL_TMP       "mail.tmp"              /* mailtemp file, diff for each BBS */
+ #EXPIRE         10                      /* days before a message is expired */
+ #GROUP          "mine"   "theirs"       /* one line for each group name     */
+ #ROOM           "mine"   "theirs"       /* one line for each room name      */
+
+#NODE           "Centauri's Place"   "Dublin, Ca."
+#PHONE          "829-7983"
+#BAUD           2400
+#DIAL_TIMEOUT   35
+#REDIAL         3
+#LOGIN      S " " W "tials:" S "cp;cent\r"
+#WAIT_TIMEOUT   30
+#PROTOCOL 			"QuickNet"
+#MAIL_TMP       "mail.cp"
+#EXPIRE 				20
+ #GROUP            "mine"               "theirs" /* one line for each group */
+#GROUP          "Treks"                    "Treks"
+#GROUP          "Crewmembers"              "Crewmembers"
+#GROUP          "Ensigns"                  "Ensigns"
+#GROUP          "Lieutenants"              "Lieutenants"
+#GROUP          "Lt. Commanders"           "Lt. Commanders"
+#GROUP          "Security"                 "Security"
+#GROUP          "StarFighters"             "StarFighters"
+#GROUP          "Private"                  "Private"
+#GROUP          "Citadel SysOps"           "Citadel SysOps"
+#GROUP          "Adults"                   "Adults"
+#GROUP          "Snide Comments"           "Snide Comments"
+#GROUP          "Nova Police"              "Nova Police"
+#GROUP          "Guardians"                "Guardians"
+
+
+
+
+
+#ROOM "Spoilers"                       "Spoilers"
+#ROOM "Holodeck"                       "Holodeck"
+#ROOM "10 Forward"                     "10 Forward"
+#ROOM "Star Trek-Original"             "StarTrek"
+#ROOM "ST:The Next Gen."               "ST:The Next Gen."
+#ROOM "StarFleet"                      "StarFleet"
+#ROOM "Officers Club"                  "The Lounge"
+#ROOM "Main Briefing Room"             "Main Briefing Room"
+#ROOM "Sick Bay"                       "Sick Bay"
+#ROOM "Science Library"                "Science Library"
+ 

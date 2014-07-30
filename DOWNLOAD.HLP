@@ -1,0 +1,47 @@
+  2HELP DOWNLOAD0
+
+  (and files in general...)
+  Download functions are available in special rooms called directory rooms.
+Directory rooms have a "]" after the roomname, rather than the normal ">"
+character.  The following commands are used to list files, to download them,
+or to upload files:
+
+  .2RA0  -- Read Archive contents
+  .2RVA0 -- Read Verbose Archive
+  .2RD0  -- Read Directory
+  .2RVD0 -- Read Verbose Directory
+  .2RI0  -- Read Infofile
+  .2RVI0 -- Read Verbose Infofile
+
+  The Read Archive command with show the contents of an ARC file.
+
+  The Read Directory and Infofile commands list the available files in the
+current room.  This commands waits for an optional filename (possibly
+wildcarded, per MS-DOS filename conventions) and will restrict its output
+to those files selected.  The default is to list all of the files.
+
+  The Verbose option gives an extended listing with date, filesize in bytes
+and download time.
+
+  .2RT0  -- Read Textfile
+  .2RW0  -- Read WC-Protocol
+  2D0    -- Download
+
+  These commands download files.  Read Textfile will request a filename,
+file will be printed (as is) to you.  Read WC-Protocol will download a file 
+using XMODEM protocol, and the Download command will let you choose a 
+protocol. 
+
+  .2ET0  -- Enter Textfile  (Terminate Entering a Textfile with control-Z)
+  .2EW0  -- Enter WC-Protocol
+  2U0    -- Upload
+
+  These commands are the inverse of the above two download commands.  They
+actually create files on the local system.  After supplying the filename,
+you will be asked to supply a brief comment describing the file.  You have
+about 60 characters.
+
+  2Related Topics0
+
+  .2h0 ROOM
+

@@ -1,0 +1,23 @@
+
+                       t** AIDE HELP FILE**q
+
+  t.AAq-ttributes      - Sets a file in a directory to hidden/read only.
+  t.ACq-hat            - Overrides no-chat.  Allows you to page the sysop.
+  t.AEq-dit room (Default) - Edit an existing room.
+  t.AFq-ile set        - Sets comments on all currently-uncommented files.
+  t.AGq-roup fn        - Add/remove access of user from specified group.
+  t.AHq-allway fn      - Add/remove room from hallway.
+  t.AIq-nsert message  - Insert last >k<illed (pulled) message into
+                           current room.
+ t*qt.AKq-ill room   - Deletes room from system.
+  t.ALq-ist group      - List all groups.
+                         - List specific group; includes all users,
+                           rooms and hallways with that access.
+  t.AMq-ove file       - Moves a file to a different directory.
+  t.ARq-ename file     - Rename a file in directory room.
+  t.ASq-et file info   - Sets comments for a specific file.
+  t.AUq-nlink File     - Deletes a file from directory room.
+  t.AVq-iew Help Text File - Views this text file (AIDE.BLB).
+  t.AWq-indow hallway  - Windows a room into a hallway.
+
+ t*q Can only be used by console sysops.

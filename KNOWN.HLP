@@ -1,0 +1,18 @@
+ .KA-pplication rooms:- Where are the application rooms on the hallway.
+ .KD-irectory rooms:- Where are the directory rooms on the hallway.
+ .KH-allways:- List all connecting hallways to that particular window.
+ .KL-imited rooms:- Lists all specified limited access rooms on that
+                    particular hallway.
+ .KM-ailrooms:- Lists all rooms that have exclusive mail to you in that
+                hallway.
+ .KN-ewrooms:- List rooms in the hallway with new messages.
+ .KO-ldrooms:- List all rooms with no new messages in them.
+ .KR-ooms:- Lists all rooms in that particular hallway.
+ .KS-tatus:- Lists out information concerning particular room.
+ .KV-erbose:- Used in conjuction with .kh, tells you what windows are connected
+              to what hallways.
+ .KW-indows:- Lists out all rooms that are windowed in that hallway.
+ .KX-cluded rooms:- Lists out rooms that you have excluded from your goto loop.
+ .K?:- Prints out file (known.mnu).
+
+

@@ -1,0 +1,42 @@
+        Single-Key Commands:
+  >B<-ypass:- Bypasses the room your in.  Does not reset your pointers.
+  >C<-hat:- Pages the sysop.
+  >D<-ownload:- Enters download protocol, allowing you to download
+                files from the system.
+  >E<-nter message:- Allows you to enter message into the system.
+  >F<-orward:- Reads from foward, messages in that room.
+  >G<-oto:- Goes to the next room in that hallway with new messages.
+  >H<-elp!:- Brings up the help menu or files.
+  >I<-ntro:- Prints out intro text file for the system.
+  >J<-ump Back:- Goes back to the previous room and resets the
+                 pointers to new.
+  >K<-nown rooms:- Lists out rooms in current hallway.
+  >L<-ogin:- Accesses the login section of the board.
+  >N<-ew:- Reads new messages in that room.
+  >O<-ld:- Reads old messages in that room.
+  >R<-everse:- Reads reserve, messages in that room.
+  >T<-erminate:- Log off.
+  >U<-upload:- Enters upload protocol, allowing you to upload
+               files to the system.
+  >X<-clude Room:- Includes/Excludes room from goto loop.
+  >?<  :- Prints the file (mainopt.mnu).
+  >~<  Ansi On/Off:- Turns ANSI graphics on/off.
+  >+<  next room:- Goes to the next room in that hallway.
+  >-<  prev. room:-  Goes back to the previous room.
+   >   next hall - Goes to the next hallway if at a windowed room.
+   <   previous hall- Goes back to the prior hallway if at a windowed room.
+
+
+         Multi-Key Commands:
+  Allows you to use one of the above functions together.
+  .B-ypass:
+  .E-nter:
+  .G-oto
+  .H-elp
+  .K-nown
+  .L-ogin
+  .R-ead
+  .T-erminate
+  .Xpert (on/off)
+  For more information on multi-key command, read (Filename) on specific
+  command.

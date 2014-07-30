@@ -1,0 +1,1202 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                             CenCit Documentation
+
+                                      by
+
+                                   Centauri
+
+
+
+
+
+                          Created December 27, 1990
+                Revised for CenCit Version 1.0, June 5th, 1991
+                Revised for CenCit Version 1.12, July 10th, 1991
+
+
+
+
+
+
+
+
+
+
+                                      Chapter 1
+
+                                    Introduction
+
+
+               CenCit is a room type Bulletin Board (BBS) system.
+             Originally derived from a game in the University of Washington 
+             mainframe system, the software has progressed over the years 
+             to become one of the best Citadel BBS systems available.
+
+	       This software is the work of many hands, I'd like to take a
+	     moment to give credit to those I know of that have worked on
+	     it. Unfortunately, most of the BBS authors who work on
+	     Citadels use pseudonyms (nyms in Citadel terminology), thus I
+	     can only mention the names I know.  Cynbe ru Taren (A.K.A.
+	     Crt) is the Father of Citadel.  He wrote the first version
+	     under CP/M.  Details of this are in the begin.hlp and
+	     history.hlp file. Gremlin produced the first MS-DOS version of
+	     Citadel (which ran only on CP/M systems prior to that),
+	     Dragon, Ray Johnson, Z'ton and Joe Broxson created the version
+	     called DragCit.  Ray Johnson went on to create TurboCit.
+	     TurboCit is now commercial BBS software. FredCit was derived
+	     from the only public release of TurboCit source code. Zen
+	     Master and Fred did the early work on FredCit with occasional
+	     routines donated by Zen Master, Jeremiah Johnson, and others.
+	     Fred released his source code at a time when it was fairly
+	     stable.  I (Centauri) got such a public release and have
+	     continued to enhance this software. Thanks to all, (including
+	     those I've neglected to mention, or don't know about), for
+	     your contributions.  I'd also like to thank other public
+	     domain authors for their public domain source code releases,
+	     which have helped improve CenCit. These include: Marty Del
+	     Vecchio for his swap code, (SWAP.ASM), Wayne Conrad for the
+	     serial drivers (IBMCOM.PAS), and RAC for the conversion of
+	     these drivers to C.
+
+					    3
+
+
+                             1.1  CenCit Features
+
+
+                 o  C Serial Drivers              o  Supports COM1-COM4.
+
+                 o  Roman Numeral Dates           o  Translates IBM
+                                                     graphics characters
+                 o  Nets of released                 for non-IBM PC
+                    moderated and twitted            systems.
+                    messages.
+                                                  o  Titles and Surnames
+                 o  Configurable special
+                    group for unmapped
+                    groups on net.
+
+                 o  Net paths, origin and         o  Random ad files, in
+                    destination country              ANSI or ASCII
+                    names.
+                                                  o  ANSI and ASCII blurbs
+                 o  Automatic                        and menus.
+                    reconfiguration when
+                    upgrades installed.           o  Alternate Help path.
+
+                 o  Supports 30 character         o  Uses only 2.5k when
+                    names, surnames,                 running applications
+                    titles, and board                (super shell).
+                    names.
+                                                  
+                 o  Sysop configurable            o  Exit events (drop to
+                    Fancy room prompts.              DOS or batch file at
+                                                     a given time).
+                 o  Sysop configurable
+                    commands.  Any                o  Direct support for
+                    command may be                   RBBS doors.
+                    redefined.
+                                                  o  Improved Bypass and
+		 o  SysOp configurable		     Goto commands.
+		    Chat Bell
+
+		 o  Better movement keys	  o  64 groups
+                                                  
+                                                  o  250 rooms
+                 o  All blurbs rotate.
+                                                  o  64 halls
+                 o  ANSI blurbs may be
+                    mixed in with ASCII           o  Multiple megabyte
+                    ones.                            message areas
+
+                 o  IBM Graphic character         o  Smart group creation
+                    support for all
+                    menus, blurbs, and            o  Room, group, and hall
+                    help.                            descriptions.
+
+					    4
+
+
+		 o  VROOM overlays.		  o  Configurable credit
+                                                     names.
+                 o  Tracks events even
+                    after shut down.              o  User password reads
+                                                     when sysop on local
+                 o  Character pacing.                console.
+
+                 o  EMS and XMS memory            o  Network and sysop
+                    support.                         only type protocols.
+
+                 o  Runs as a sub board           o  Default network
+                    from any other BBS               routing paths.
+                    with enough memory.
+                                                  o  Automatic log-off
+                 o  Run time based (CRON)            after downloads or
+                    events from the                  uploads.
+                    command line.
+
+		 o  Turn off chat per		  o  Trap all output that
+		    specific user.		     a specific user sees.
+
+                 o  Shell mode "dump              o  Built in screen
+                    user" key, F2.                   saver.
+
+                 o  ANSI/ISO color                o  On screen clock.
+                    messages.
+
+		 o  Recognizes Hayes		  o  Enable Off-line reader
+		    verbose response		     (Network code) for a
+		    codes.			     specific User.
+		    
+		 o  Choice of 2 column room-	  o  SysOp configurable number
+		    name display or packed	     of sounds in messages per
+		    together.			     user visit
+
+		 o  Sound effects and music	  o  Default groups for new
+		    in messages 		     users.
+
+                 o  Ability to net sound and
+                    music messages with com-
+                    patable BBS's
+
+
+
+
+
+
+
+
+					    5
+
+
+
+                              1.2  CenCit Files
+
+
+               Documentation files
+
+               CCIT.DOC       This file
+	       STRF.DOC       Time string format
+                 (In progress)
+               STRUCT.DOC     Data structures  
+               ACCOUNT.DOC    Accounting
+               CCITNET.DOC    Networking Technical Information
+
+               Configuration files
+
+               CONFIG.CIT     System Configuration
+               CRON.CIT       Time based events
+               EXTERNAL.CIT   External programs & protocols
+               GRPDATA.CIT    Accounting data
+               NODES.CIT      Networking data
+               ROUTE.CIT      Networked mail paths
+
+                    Help, menu and blurb files
+
+             AD.BLB           GROUP.HLP        READOPT.MNU
+             AD1.BL@          HALLWAY.HLP      ROOM.HLP
+             AIDE.BLB         HELLO.BLB        ROOMEDIT.MNU
+             AIDE.MNU         HELPOPT.HLP      SLEEP.BLB
+             ANSI.HLP         INTRO.HLP        SLEEPY.BLB
+             BULLETIN.BLB     KNOWN.MNU        SPECIAL.HLP
+             CHAT.BLB         LOGIN.HLP        SURNAMES.HLP
+             CLOSESYS.BLB     LOGOUT.BLB       SYSOP.BLB
+             CONFIG.HLP       MAINOPT.MNU      SYSOP.MNU
+             DOHELP.HLP       MESSAGE.HLP      TEXTUP.BLB
+             EDIT.MNU         NETWORK.HLP      USERINFO.BLB
+             ENTOPT.MNU       NEWROOM.BLB      VERIFIED.BLB
+             ENTRY.BLB        NOCHAT.BLB       WCDOWN.BLB
+             FILES.HLP        NOLOGIN.BLB      WCUP.BLB
+             GOODBYE.BLB      PASSWORD.BLB     MUSIC.HLP
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					    6
+
+
+				1.3 CenCit Setup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					    7
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            6
+
+
+
+
+
+
+
+
+
+
+
+
+                                  Chapter 2
+
+                                 Installation
+
+
+               Installation can take some time.  Be patient, the results
+             are well worth it.
+
+
+                                 2.1  Basics
+
+
+               First of all, create a "HOMEPATH" directory on your drive 
+             (remember the name of this, you will need it later).  Then 
+             install the files from the release zip files into the 
+             appropriate directories on your hard drive.  Use the -d option 
+             to PKUNZIP for this, so that the directories contained in the 
+             .ZIP files will be created.
+
+               Example:
+
+                    c:
+                    md \ccit
+                    cd \ccit
+                    pkunzip -d a:\ccit112.zip c:\ccit
+                    pkunzip -d a:\ccitfile.zip c:\ccit
+
+               Use the appropriate names for CCIT112.ZIP (changes with each
+             release), and CCITFILE.ZIP.  
+
+               PKUNZIP will create other paths that citadel will look for.
+             These are referred to as "TEMPPATH", "APPLICATION", "MSGPATH",
+             "TEMPPATH", and "ROOMPATH".
+
+               The default paths are:
+
+               c:\ccit            HOMEPATH
+               c:\ccit\MSG        MSGPATH
+               c:\ccit\HLP        HELPPATH
+               c:\ccit\ROOM       ROOMPATH
+               c:\ccit\TEMP       TEMPPATH
+               c:\ccit\APLIC      APPLICATIONS
+
+               You make change these paths by editing the CONFIG.CIT and
+             creating different directories. If you do, make sure no path
+             is a root directory. If you want to use a ram disk, for your
+             TEMPPATH you need to make a directory on that disk to use.  If
+
+
+
+                                            7
+
+
+
+
+
+
+             you do change these, it is very important that you do not have
+             the same path for HOMEPATH and TEMPPATH.
+
+
+          2.2  Your AUTOEXEC.BAT and CONFIG.SYS files
+
+
+                 Before you attempt to run CenCit, look at your CONFIG.SYS
+             file on your boot drive.  The FILES setting should be at least
+             20.  If there is no FILES line in your CONFIG.SYS, add the
+             following line to it with an ASCII text editor:
+
+                    FILES=20
+
+               There are a couple of options that may be set in your
+             AUTOEXEC.BAT file.  These are called "87" and "TZ".
+
+               TZ sets your time zone name (three characters, and the
+             offset from Greenwich mean time).  87 allows you to tell
+             CenCit if an 80x87 coprocessor exists in your system.  If you
+             do not set a value here, the BBS system will test for the
+             presence of a coprocessor at start up.  If you have a BBS in
+             the Pacific Standard time zone, and no 80x87 coprocessor, you
+             would use these lines in your AUTOEXEC.BAT:
+
+                    SET 87=N
+                    SET TZ=PST8
+
+               For daylight time, you would use:
+
+                    SET TZ=PDT8
+
+               Note, this will change as soon as a time zone related bug in
+             the C compiler I use is fixed.
+
+
+          2.3  Your .CIT Files
+
+
+               Citadel uses a very flexible (and sometimes confusing)
+             configuration method.  Most editable parameters are kept in
+             files with the extension .CIT.  Except for FILEINFO.CIT, all
+             .CIT files are editable text files.  Each of these files
+             contains information on what the parameters do.
+
+             CONFIG.CIT     System Configuration
+
+             CRON.CIT       Time based events
+
+             EXTERNAL.CIT   External programs & protocols
+
+             GRPDATA.CIT    Accounting data
+
+             NODES.CIT      Networking data
+
+
+
+                                            8
+
+
+
+
+
+
+             ROUTE.CIT      Networked mail paths
+
+               All .CIT file parameters start with a '#' character as the
+             very first character on the line.  Anything else will disable
+             the parameter.  Parameters consisting of more then one word
+             should be quoted, and more then one value may be specified on
+             a single line where noted.  C language style escape characters
+             in quoted strings are supported.  Be careful with this, to
+             specify a path in a quoted string, you will need to double up
+             the '\' characters.  Thus, C:\CCIT\APLIC becomes
+             "C:\\CCIT\\APLIC" when quoted.  Some control characters can be
+             inserted in parameters by using '^' as a prefix.  Control-G
+             would become ^G in a quoted string.
+
+               You will eventually need to edit all of the .CIT files
+             except the FILEINFO.CIT files.  These files all contain
+             comments describing the parameters in them.  Start out with
+             CONFIG.CIT.  Most of the defaults for these parameters should
+             be usable.  Pay careful attention to the path parameters, as
+             no special error checking is done on these.  The paths must
+             exist!  I recommend you use a drive letter when specifying any
+             path.  If you do not intend to network your board, you can
+             ignore ROUTE.CIT and NODES.CIT.
+
+
+                       2.4  CCit Command Line Options
+
+
+               Several options are available when you start CenCit from
+             the DOS command line.  The general format is:
+
+                    CCIT [options]
+
+               Options can be specified in any order.  Options can be in
+             upper or lower case, and may be prefixed with '-' or '/'.  The
+             '-?' command line option displays all of the valid command
+             line options and arguments.
+
+               Valid DOS command line options (switches) are:
+
+                    -b baud   Starting baud rate (300-19200).  This is
+                              needed when running in shell/door mode from
+                              another BBS.
+
+                    -c        Read configuration files and rebuild .DAT
+                              files.
+
+                    -d        DesqView/TopView (not working yet).
+
+                    -e        Use EMS memory for overlays (faster!).
+
+                    -l pass   Log in with the "initials;password" (pass) if
+                              the accout exists.
+
+
+
+
+                                            9
+
+
+
+
+
+
+                    -p num    Set output pacing to num milliseconds between
+                              characters.  Intended for PC emulation on the
+                              Atari ST.
+
+                    -s        Run as a shell from another BBS.  This
+                              suppresses hang-up and modem initialization.
+
+                    -u name   Log in the named user, if the account exists.
+
+                    -v        Just run cron events and exit back to DOS.
+
+                    -x        Use extended memory for overlays.  Due to
+                              hardware problems with the 80286
+                              microprocessor, this option only works on
+                              80386 or 80486 systems.
+
+                    -?        Displays command line options.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                           10
+
+
+
+
+
+
+
+
+
+
+
+
+                                 Chapter 3
+
+                                 Networking
+
+
+               Portions of this section derived from Z'ton's NETWORK.DOC.
+
+               Compatible Citadels can exchange messages in one or more
+             rooms via networking.  There are several steps to setting up a
+             network link between two boards:
+
+                    Set up the node accounts on each board
+
+                    Edit your network setup in NODES.CIT
+
+                    Add a time based (CRON) NETWORK event in CRON.CIT
+
+                    Test the network link
+
+               Before you network, you need to find a node to network with.
+             It's helpful to net with someone who has had experience
+             setting up netting.  Look at the GRID.HLP file for numbers of
+             public BBS's if you don't currently know anyone helpful on the
+             net.  Most of these boards carry rooms where you can get your
+             questions answered, and find other Citadels to network with.
+             Most of these boards will net with you, so don't be shy!
+             Currently, our network is active in Seattle, Dallas,
+	     Washington DC, the bay area (CA), and Nashville.  We are
+	     looking for new areas to network to.
+
+               Networking requires a Hayes compatible modem (or near
+             compatible) that will hang up when the DTR line is lowered.
+             (See your modem technical reference manual for appropriate
+             settings on your modem).  This section assumes you have
+             already made the file transfer protocol work.  See the notes
+             in the top if EXTERNAL.CIT for more information on how to do
+             this.
+
+
+                       3.1  Setting up a node account
+
+
+               To net two boards each board needs an account on the other.
+             Log in on your system as a new user with the initials and
+             password the other board will use.  Remember these, you will
+             need them later.  The new name should exactly match the other
+             boards name.  Terminate.  Log-in as a sysop and .SU (Sysop
+             Userlog) the new account, making that it is a NODE account.
+
+
+
+                                           11
+
+
+
+
+
+
+             Also give them the groups needed to get into any room they
+             want to network (.SGU).
+
+               This must be done on both boards for the net to function.
+
+
+                           3.2  Node File Entries
+
+
+               Edit the file NODES.CIT with any editor that will save to a
+             normal text file.  In this file contains information on all
+             the nodes that your board nets with.  Look in NODES.CIT for
+             more information on this.
+
+               Nodes entry file format:
+
+               #NODE         "Node Name" "Region Name"
+               #PHONE        "555-5555"
+               #BAUD         2400
+               #DIAL_TIMEOUT 30
+               #REDIAL       3
+               #LOGIN        W "als:" S "initials;password"
+               #WAIT_TIMEOUT 15
+               #PROTOCOL     "Zmodem"
+               #MAIL_TMP     "Nodename.mai"
+               #EXPIRE       25
+               #GROUP        "Your Group" "Their Group"
+               #ROOM         "Your Room"  "Their Room"
+
+                                3.2.1  #NODE
+
+               The name and region of the node you want to net with.  All
+             names are quoted strings of 30 characters or less each.  The
+             region is not used in message transfer.  Make sure the node
+             name exactly matches the name in your BBS's user log.  Also
+             make sure the node and region names match those of the remote
+             system.
+
+                               3.2.2  #PHONE
+
+               The phone number for your modem to dial in order to reach
+             the other BBS.  Must be a quoted string of thirty characters
+             or less.  First dial this number manually, and make darn sure
+             it's a modem on the other end.  If you have any problems,
+             check again.  We don't want to harass the electronic non
+             entities out there (read: people without modems).
+
+                                3.2.3  #BAUD
+
+               The baud rate to connect to the other system at. This must
+             be in the range of 300 to 19200.
+
+
+
+
+
+
+                                           12
+
+
+
+
+
+
+                            3.2.4  #DIAL_TIMEOUT
+
+               The number of seconds before giving up on connecting to the
+             other board.  Use a number here, usually 30-45 seconds, longer
+             in some areas.
+
+                               3.2.5  #REDIAL
+
+               The number of times to attempt the dial out before quitting.
+
+                               3.2.6  #LOGIN
+
+               A script to log you into the remote board.  Use the initials
+             and password you created your board's account on the remote
+             system with.  Allowed commands in this script are:
+
+                    P seconds Pause, dumping modem input
+
+                    S "text"  Send text
+
+                    W "text"  Wait for text
+
+                    ! "program"    Run a program
+
+                            3.2.7  #WAIT_TIMEOUT
+
+               The number of seconds to wait for the log-in script W
+             command text to come in.  This normally translates into the
+             amount of time it takes a log-in to fail (sometimes called
+             "Zombie Modem").
+
+                              3.2.8  #PROTOCOL
+
+               The name of the protocol to use from EXTERNAL.CIT.
+
+                              3.2.9  #MAIL_TMP
+
+               A path for all mail being routed to this board.  I'm planing
+             a future enhancement to automatically place all of this in a
+             subdirectory.  Please use a simple file name here for now.
+
+                              3.2.10  #EXPIRE
+
+               Oldest message in days.  This is the age of oldest message
+             that will be accepted over the network.  Older messages will
+             be 'expired', and do not appear in your message base.  To
+             avoid duplicates, do not use a number larger the your message
+             base's oldest possible message.  If you haven't been running
+             your BBS long enough to "scroll" your message base, use a
+             reasonable number, such as 30.  If you have already filled
+             your message base at least once, you can check to see how
+             often the message base scrolls.  To check for this, log in as
+             a sysop, and do the command ".R#".  Accept the default value
+             for the message number to read.  This will be the oldest
+
+
+
+                                           13
+
+
+
+
+
+
+             message currently on your system.  Calculate the number of
+             days old this message is, and use that value here.
+
+                               3.2.11  #GROUP
+
+               You may have any number of #GROUP lines, up the the total
+             number of groups your system may contain (64).  The first name
+             is the name of the group on your system.  The second name is
+             the group name on the system you net with.  These usually are
+             the same, but you can use these to convert a group name.  The
+             #GROUP lines affect networked, group only messages.  These
+             messages will only be visible to members of the group.  You
+             may enter a networked, group only message by using the .EG or
+             .EL commands in a networked room.  The names used here are
+             quoted strings of 30 characters or less.
+
+                               3.2.12  #ROOM
+
+               As with #GROUP, you can have as many #ROOM lines as you
+             want, up to the number of rooms in your system (maximum 255).
+             These lines determine which rooms exchange messages.  The
+             first room name is the networked room on your system, the
+             second is the networked room on the remote system.  It is wise
+             to use the same name in both places when the room is widely
+             netted.   This prevents "cross netted" rooms, where the
+             contents of one room inadvertently end up in another room.
+
+               On many boards a privately netted room is created for each
+             node netted to.  You might want to try this.  On each board,
+             create a networked room, (using the .ER and .AE commands),
+             named after the other board.  Then each board adds a #ROOM
+             line like:
+
+                    #ROOM     "Their BBS name"    "Your BBS name"
+
+               This will map the messages from their board into a room on
+             your BBS named after their board, and your messages into a
+             room on their BBS named after yours.
+
+               Make sure that the other board's account has access to all
+             of the rooms netted.  If any of the networked rooms are group
+             only type rooms, you will need to check the other board's
+             group access vs the groups of the rooms involved.  If any of
+             the rooms are hidden, log in under the node's account, and do
+             a .goto to the room before netting.
+
+               The other sysop MUST create a matching room list, or else
+             the messages will not net both ways.  A telephone conversation
+             while editing these files helps greatly.  Notice that the room
+             lists on the two systems will be the same, with the room name
+	     columns reversed.	Nodesed is VERY useful here.
+
+
+
+
+
+                                           14
+
+
+
+
+
+
+                            3.3  The Route File
+
+
+               Edit the file ROUTE.CIT.  Examples of the formats allowed:
+
+	       #ROUTE	       "Fred's Toy"         "Centauri's Place"
+	       #ROUTE	       "TurboTech"          "Centauri's Place"
+	       #ALIAS	       "Fred"               "Fred's Toy"
+               #ALIAS          "Cen"                "Centauri's Place"
+	       #DEFAULT_ROUTE  "Centauri's Place"
+
+                               3.3.1  #ROUTE
+
+               You may have any number of #ROUTE lines.  These lines define
+             where mail for systems you do NOT net with goes.  Make sure
+             you do not have a #ROUTE line for any systems you directly
+             network with.  The first name is the board the mail is
+             destined for.  The second name is the board that the mail will
+             actually be sent to, in route to the destination board.  It is
+             best to use the name of a board directly netted to the
+             destination board in the second position, wherever possible.
+             The second name must be a board you directly network with, and
+             must exactly match the spelling of the boards account name in
+             your user log.
+
+                               3.3.2  #ALIAS
+
+               BBS aliases (often known as 'zips'), are used when entering
+             network mail with the .EE command.  For example, if you were
+             sending mail to "Centauri @ Centauri's Place", you might enter 
+             "Centauri @ Cen" instead.  To do this, you would need a #ALIAS 
+             line like the example above.
+
+                           3.3.3  #DEFAULT_ROUTE
+
+               If set, the default route is where mail is sent, when you
+             don't directly net with the destination board, and no #ROUTE
+             line exists for the destination BBS.  The default route BBS
+             name should be a board that your system directly networks
+             with.  Be sure the spelling exactly matches the boards log-in
+             name.
+
+
+                       3.4  Testing the Network Link
+
+
+               After completing the above sections, and editing the
+             CRON.CIT file (see the Time Based Events chapter), you are
+             ready to test the network link.
+
+               First of all, check the telephone number you entered in
+             NODES.CIT.  Make sure you are not calling someone's voice line
+             by mistake, and the there is a modem on the other end giving
+             you that nasty carrier squeal.
+
+
+
+
+
+                                           15
+
+
+
+
+
+
+               Do a .SCL (Sysop Cron List) to view the cron table.  Make
+             sure the NETWORK entry for the board you're netting with is in
+             there.  If it isn't, do a .SCE (Sysop Cron Enter) to load the
+             cron file.
+
+               Log out, if you're logged in.
+
+               Press ALT-E.  This will start off the next cron event.  Any
+             key press after this will abort a network attempt.  If
+             necessary, you can use .SCL to see what's going on.  The
+             command .SCR (Sysop Cron Reset) can be used to cause a 'done'
+             event to be ready to run again.
+
+               Watch the screen!
+
+               First, your system will attempt to dial the remote system.
+             If you have problems getting past this step, use ALT-D to turn
+             on debug mode.  The system will then display the modem
+             response codes.  Common problems here are:
+
+                    Wrong #MDATA port number in CONFIG.CIT (the board would
+                    never answer if you have this problem.
+
+                    Incorrect phone number.  Remember that long distance
+                    calls require a 1 and sometimes an area code.  Some
+                    PBX's require a 9 be dialed to first get an outside
+                    line.  Use commas for delays if needed here.
+
+                    A mismatch between the modem response codes set up in
+                    DUMB_MODEM in CONFIG.CIT and the modem switch settings.
+
+               After the dial out, and log-in to the remote board, the
+             system will attempt to run your communications protocol
+             several times.  Common problems here are:
+
+                    DSZ.COM not in your APLIC path.
+
+                    Different protocols on the two boards.
+
+                    HOMEPATH and TEMPPATH are the same.
+
+                    Out of disk space on the TEMPPATH.
+
+                    Out of memory (use .RS to check free memory).  More
+                    memory can be freed by using the '!' prefix in your
+                    protocol settings.
+
+               After the link completes, you will see a summary display of
+             the messages transferred.  Errors listed here will also be
+             entered as message in your Aide room.
+
+
+
+
+
+
+
+                                           16
+
+
+
+
+
+
+
+
+
+
+
+
+                                 Chapter 4
+
+                             Time Based Events
+
+
+               A time based (CRON) event is a command that Citadel will run
+             every so often using the commands in the CRON.CIT file.  This
+             file controls automatic networking, and any time based
+             programs you may want to play with (usually a batch file).
+
+               Citadel checks about every 3 minutes to see if anything is
+             going on.  If anything has happened in the last 3 minutes,
+             Citadel continues to wait.  But if nothing has happened in 3
+             minutes it checks it's CRON.CIT file.  If there is an event to
+             run, Citadel will run the event.  If not, it resets the modem
+             and nothing else happens.
+
+
+                        4.1  Editing the CRON events
+
+
+               Cron file format:
+
+               #DO          NETWORK    "Node Name"
+               #HOURS       ANY
+               #DAYS        ANY
+               #REDO_TIME   480
+               #RETRY_TIME  0
+
+                                 4.1.1  #DO
+
+               Several types of cron events can be specified in the #DO
+             command.  The format for the #DO line must be one of these
+             four formats:
+
+                    #DO SHELL_1 "program"
+
+                    #DO NETWORK "Node Name"
+
+                    #DO LOCAL   "Node Name"
+
+                    #DO EXIT    0
+
+               SHELL_1 events are used for running external programs.
+             These events are cleared whenever the program event runs.  The
+             format for the program line is flexible, and defined in
+             CRON.CIT.
+
+
+
+
+                                           17
+
+
+
+
+
+
+               NETWORK events are used for firing off a network linkup
+             between two boards.  This type of event is cleared when the
+             network link completes.
+        
+                               4.1.2  #HOURS
+
+               This defines the hours during which the event can happen.
+             Valid hours are 0-23, or Any.  You can have more then one hour
+             on a single #HOUR line.  To have a program run somewhere
+             between 1 AM and 3 AM when there is time, use a #HOURS line
+             like:
+
+                    #HOURS 1 2 3
+
+               To allow the event to happen at any hour, use:
+
+                    #HOURS Any
+
+                                4.1.3  #DAYS
+
+               This defines the days the event can happen on.  Valid days
+             are Mon,Tue,Wed,Thu,Fri,Sat,Sun, or Any.  You can have more
+             then one day on a single #DAY line.  To have an event only run
+             on weekends, use a #DAY line like:
+
+                    #DAY Sat Sun
+
+               To allow the event to happen on any day, use:
+
+                    #DAY Any
+
+                             4.1.4  #REDO_TIME
+
+               This is the minimum number of minutes the BBS will wait
+             before it will attempt the event again after successfully
+             completing it.
+
+                             4.1.5  #RETRY_TIME
+
+               This is the minimum number of minutes the BBS will wait
+             before attempting a network event again after it fails.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                           18
+
+
+
+
+
+
+
+
+
+
+
+
+                                 Chapter 5
+
+                            Terms and Buzzwords
+
+
+             BBS            A bulletin board system.  A place to call with
+                            your modem, and explore.
+
+             Citadel        A room type BBS system.
+
+             Cron Event     Something that happens at a certain time.
+
+             Door           A program designed to run with a BBS system.
+
+             Hallway        A group of rooms.
+
+             Linear BBS     A type of bulletin board that does not support
+                            message area group naviagtion (hallways and
+                            windows).
+
+             Node           A BBS on the network.
+
+             QBBS           A popular linear BBS system.
+
+             RBBS           Another popular linear BBS system.
+
+             Room           A place to put messages, files, and run door
+                            programs from.
+
+             Zip            An abbriviation of a network node name.
+
+
+                          5.1  Contacting Centauri
+
+
+               I can be reached over networks by using the
+             following address:
+
+               DragCit Net:   Centauri @ Centauri's Place, Dublin CA
+
+
+
+
+
+
+
+                                           19
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Contents
+
+
+
+                  Chapter 1  Introduction                            3
+                     1.1  CenCit Features  . . . . . . . . . . . . . 3
+                     1.2  CenCit Files   . . . . . . . . . . . . . . 5
+
+                  Chapter 2  Installation                            7
+                     2.1  Basics . . . . . . . . . . . . . . . . . . 7
+                     2.2  Your AUTOEXEC.BAT and CONFIG.SYS files . . 8
+                     2.3  Your .CIT Files  . . . . . . . . . . . . . 8
+                     2.4  CCit Command Line Options  . . . . . . . . 9
+
+                  Chapter 3  Networking                             11
+                     3.1  Setting up a node account  . . . . . . .  11
+                     3.2  Node File Entries  . . . . . . . . . . .  12
+                        3.2.1  #NODE . . . . . . . . . . . . . . .  12
+                        3.2.2  #PHONE  . . . . . . . . . . . . . .  12
+                        3.2.3  #BAUD . . . . . . . . . . . . . . .  12
+                        3.2.4  #DIAL_TIMEOUT . . . . . . . . . . .  13
+                        3.2.5  #REDIAL . . . . . . . . . . . . . .  13
+                        3.2.6  #LOGIN  . . . . . . . . . . . . . .  13
+                        3.2.7  #WAIT_TIMEOUT . . . . . . . . . . .  13
+                        3.2.8  #PROTOCOL . . . . . . . . . . . . .  13
+                        3.2.9  #MAIL_TMP . . . . . . . . . . . . .  13
+                        3.2.10  #EXPIRE  . . . . . . . . . . . . .  13
+                        3.2.11  #GROUP . . . . . . . . . . . . . .  14
+                        3.2.12  #ROOM  . . . . . . . . . . . . . .  14
+                     3.3  The Route File . . . . . . . . . . . . .  15
+                        3.3.1  #ROUTE  . . . . . . . . . . . . . .  15
+                        3.3.2  #ALIAS  . . . . . . . . . . . . . .  15
+                        3.3.3  #DEFAULT_ROUTE  . . . . . . . . . .  15
+                     3.4  Testing the Network Link . . . . . . . .  15
+
+                  Chapter 4  Time Based Events                      17
+                     4.1  Editing the CRON events  . . . . . . . .  17
+                        4.1.1  #DO . . . . . . . . . . . . . . . .  17
+                        4.1.2  #HOURS  . . . . . . . . . . . . . .  18
+                        4.1.3  #DAYS . . . . . . . . . . . . . . .  18
+                        4.1.4  #REDO_TIME  . . . . . . . . . . . .  18
+                        4.1.5  #RETRY_TIME . . . . . . . . . . . .  18
+
+                  Chapter 5  Terms and Buzzwords                    19
+                     5.1  Contacting Centauri  . . . . . . . . . .  19
+
+
+
+
+
+
+                                           i
+

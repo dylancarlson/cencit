@@ -1,0 +1,63 @@
+                               Snd.com
+                  Sound Generator for CenCit Chat Bell
+                  
+         This program is provided to help you custom configure your chat 
+       bell.  When running this program you may optionally change the 
+       pre-programmed defaults to suit your needs.  If you want to use 
+       values that differ by more than 100-200 then it is advisable to 
+       change them when prompted for.  You may still get to your desired 
+       values when the program is running, but it will take longer.
+       
+         The first prompt asks for the type of sound you want.  They are:
+            1.  Bell        (An alternating high and low tone)
+            
+            2.  Slide Up    (A varying tone starting at the low frequency 
+                            and gradually rising to the high frequency 
+                            stepping [changing value] at INCR at a time). 
+            
+            3.  Slide Down  (A varying tone starting at the high 
+                            frequency and gradually falling to the low 
+                            frequency stepping [changing value] at INCR at a 
+                            time).
+            4.  Siren       (Does a slide up followed by a slide down) 
+            
+         Then you will be prompted for the following values:
+            Hi          This is the high frequency limit
+            Lo          This is the low frequency limit
+            incr        This is the stepping value
+            delay1      This is the amount of time (in milliseconds) that 
+                        the sound is on.
+            delay2      This is the amount of time (in milliseconds) that 
+                        the sound is off just before the cycle repeats.
+                        
+                       
+         At this point, the sound will begin playing.  To change the sound,  
+         the following keystrokes are available:
+            
+            Up Arrow            Increases the high tone 
+            Down Arrow          Decreases the high tone 
+            
+            Right Arrow         Increases the low tone 
+            Left Arrow          Decreases the low tone 
+            
+            + or =              Increases the step 
+            -                   Decreases the step
+            
+            Page Up             Increases the sound on delay 
+            Page Down           Decreases the sound on delay 
+            
+            Home                Increases the delay between cycles
+            End                 Decreases the delay between cycles
+            
+         When you have the desired sound, press escape and the values will 
+         be printed on the screen for you.  
+         
+         If you run the program re-directing standard output to a file, 
+         example:
+           snd > ext.cit
+           
+           The program will generate into that file the values needed for 
+           the external.cit file.  Re-directing the output will not effect 
+           any of the prompts in the sound program itself.   
+           
+           

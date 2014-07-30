@@ -1,0 +1,25 @@
+      Group 4 "Interconnects" { "*" } 
+ 
+      C C F G H H I M M M S T T 
+      E Z R S A C N E F O A 5 T 
+      N   E P C     M   S L D 
+          D                    | 
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+ 
+ CEN |=   q  |      d    |     | 
+ CZ  |  =    |        d  |  d  | 
+ FRED|q   = d|    d d q q|q q q| 
+ GSP |    d =|          d|    q| 
+ HAC |       |=       q  |q   q| 
+ HC  |       |  =       q|  d  | 
+ IN  |    d  |    =   q  |    q| 
+ MEM |d   d  |      =    |     | 
+ MF  |  d q  |q   q   =  |  d q| 
+ MOS |    q d|  q       =|  d  | 
+ SAL |    q  |q          |=   q| 
+ T5D |  d q  |  d     d d|  = q| 
+ TT  |    q q|q   q   q  |q q =| 
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+ 
+ 
+     d = Net 1    q = QuickNet    5 = Net 1.5 
+
+

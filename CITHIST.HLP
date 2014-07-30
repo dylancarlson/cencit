@@ -1,0 +1,190 @@
+                         Citadel History
+            Reprinted for all the Users who are interested
+
+    From Grendel @ Memory Alpha, Seattle
+This is a file I picked up that was sitting in CrT's unix machine at the UW.
+ 
+ 
+ Long, long ago (10 of your orbits: 81Dec22) in a
+$65-a-month one-room apartment far, far away (ever walk from Rutgers
+to Seattle?) a lone figure (try fitting two in that apartment!) posted
+the phone number for the apartment's computer line (206-ODE-DATA) on a
+few Seattle BBSs, started up a spanking-new BBS, and left for
+Christmas vacation.  Every good creation myth needs a miracle: Come
+vacation return on 82Jan04, the system was still running.  With rave
+reviews, yet.
+ 
+ Thus began Citadel.  Wasn't *called* Citadel yet, of course.  At
+first, it was just called ODE-DATA, which simplified remembering the
+phone number.  (Simple, convenient user interfaces were the central
+point of the Citadel design.)  Finding a good name for the software
+(as distinct from the BBS) took far longer than designing and
+implementing it: A workable name would have to suggest a building (the
+room metaphor was central) alliterate visually and phonetically with
+"Cynbe" (not a whole lot of soft-c-initial words in English!) and
+sound vaguely mysterious and impressive.  I eventually concluded that
+"citadel" was the unique best English solution to these constraints...
+despite the somewhat distasteful martial connotations.
+ 
+ (And immediately realized that in selecting that particular name I had
+changed -- albeit trivially -- the behavior of hundreds of people I
+would never even meet.  Hari Seldon's psychodynamics may yet predict
+the broad sweep of human events in some respects, but there is clearly
+also a chaotic element to your human society: arbitrarily small events
+are sometimes amplified to produce arbitrarily large effects.  But I
+digress...)
+ 
+ Why write a Citadel?  It was almost involuntary, actually.  I was
+coming off a long string of botched sparetime Big Projects (a lisp
+interpreter (FLIP), a Smalltalk compiler/interpreter (Banter), an
+interactive Adventure construction kit (DAND), ...) written in MACRO
+and Rutger Pascal (small world!) on my favorite KA-10 (hands up,
+everyone who's programmed a PDP-10 computer with *no hard disk*...;-),
+and heading into a long string of botched sparetime Big Projects (a
+Forthlike object-oriented language with virtual memory (Tetra), a
+logical constraint compiler, a Desmet C clone (plus 32016 port), a
+logical constraint interpreter, a High C clone with virtual-memory dos
+extender and linker...)  written in C on micros.
+ 
+ Sandwiched between the sparetime Big Projects were occasional
+quick-and-dirty sparetime Little Projects designed to quickly
+accomplish some specific task: a text editor, text formatter, modem
+program, ANSI terminal emulator, window system, some Loglan
+parsers...
+ 
+ Citadel was a Little Project.  (Retrospective observation: Big
+Projects take a year or more to write and never get used.  Little
+Projects take about a month to write, and get used for years.  Go
+figure.)
+ 
+ Specifically, in 81Dec I was just getting really excited about Tetra,
+the object-oriented-forth-with-virtual-memory botch.  (Forth-like
+because I didn't see any way to fit a compiler for Smalltalk on CP/M
+and still have room for virtual machine, runtimes, editor and user code...)
+ 
+ Meantime, in mundane space, I'd kicked the TV habit by switching to
+BBSs (wastes just as much time, but you get finger exercise :-), and
+was having no luck convincing folks that the Seattle-area BBSs were so badly
+designed and implemented as to constitute a mortal insult to every
+caller.
+ 
+ Have the mists of time obscured the then-state-of-the-art?  BBSs were
+written in BASIC on Apple IIs and TRS-80s (if "TRS-80" is pronounced
+"Trash-80", how is "PS/2" pronounced?), with the modem I/O patched
+parallel to keyboard and screen: When the BBSs crashed (which was
+frequently -- also a major sport), the caller would be left at the
+BASIC prompt.  (The approved caller response was to edit the BBS code
+to suit, then type RUN...)  The typical BBS message store was a single
+chronological queue of messages, each displayed (at a glacial 30 cps!)
+with endless headers announcing the message DATE, SUBJECT, AUTHOR,
+MESSAGE NUMBER (??!!@#$%!)  and anything else the BBS hacker could
+think of to print, each allocated one full line of screen space -- in
+an era when a screen as big as 24x80 was an almost unknown luxury.
+(Lower case text?  Be serious!)  Each message would end with enough
+prompting to confuse an American President, and wasted command
+keystrokes outnumbered the other kind...
+ 
+ Most galling of all, people were *selling* these programs, and the
+sysops were happy to get them!  So, aggravated daily by Seattle BBS
+software, and griping having proved utterly ineffective, I was left
+with the wish that someone would put up a BBS with a *good* interface.
+I was convinced that, having once used one, BBS folk would put some
+pressure on the other BBSs to clean up their act.  (You humans seem
+much more impressed by a working example than an abstract
+critique...;^)
+ 
+ Which two threads came together one day (I think) when, tinkering with
+the design of object pointers for Tetra, it occurred to me that I'd
+found the final component needed to make a simple BBS message file
+implementation fly: Adding generation numbers to both messages and
+message pointers, so hanging pointers (pointers to messages which have
+be overwritten by new messages) could be simply and efficiently
+detected.
+ 
+ I didn't *really* want proto-Citadel (which was merely a Little
+Project, after all) taking time away from Tetra (a Big Project), but
+some ideas are just too "technically sweet" to resist.  When (81Dec12)
+I ran across a great price ($298.86 ~= 1/2 months pay :-) on a
+state-of-the-art modem (Hayes Smartmodem 300) -- my surplus $50
+acoustic modem, pried out of a recycled TI Silent 700 terminal (ever
+play StarTrek on one?  Scrolling paper... suspense... >BEEP<!) clearly
+wasn't going to cut it as a BBS host -- impulse overrode good
+judgement, and I decided to go for it.  Coding went quickly, and I had
+a second phone line in by 81Dec22 (sweet-talking them into giving me
+the DATA number), according to part of an 81Dec21 note:
+ 
+ ODE-DATA line to be put in tomorrow.
+ Just about "finished" the program -- 1300 lines
+ in four days work!  3 bugs:  a missing FOR ";",
+ strings in _printf_, and overflow of some sort
+ in compiler.  Which is just as well, because I'm
+ impatient to drop it in favor of a Z80
+ Smalltalk effort.
+ 
+ Out of about 20 pages of December notes, this appears to be the only
+substantive reference to Citadel. Note lack of name for program,
+typical of Little Projects.  81Dec22 entry, in it's entirety:
+ 
+ >81Dec22 ROOM doing well. Z80 has relative
+ jumps!!!
+   Reagan is convinced that peace is a Communist
+ Plot, it would appear...
+ 
+     SPECULATIVE FABULATION!
+ 
+ The latter being yet another explanation of the SF acronym, of course.
+Ten pages for the first half of January yield little more relating to
+Citadel:
+ 
+ 82Jan05:  "... ODE-DATA up while at la Push. ..."
+ 82Jan08 "Lots of conversations via ODE-DATA: Brett,
+         Gordon Leckenby..."
+         "CRYPTIC CAVERN CCIPRTY ACENRV
+          -     - -- -
+        ACCCE"
+ 82Jan09 "Anon just cracked cryptic cavern in ~15 secs!!
+         and hung up without logging in!  Someone just checking?"
+ 
+ Gordy was later to contribute generously to trying to keep ODE-DATA
+(by then ODD-DATA, courtesy of a user suggestion) on the air, to no
+avail.  The anagrams were for a chain of hidden rooms ("GUESSNAME
+rooms" in 1991 terminology), each containing a puzzle yielding the
+name of the next room.  (Got sort of confusing once the original hints
+started scrolling off!) This fun-once idea (which was never revived,
+to my knowledge), was a weak echo of my earlier DAND botch, and a
+major motivation for including hidden rooms -- a cheap feature which
+might conceivably spark a new category of BBS functionality.  (If
+multi-line BBS hardware had been cheap in '82, would Citadel have
+become a CP/M MUD?  Not impossible.  Despair at the technological
+limitations of single-line access, no cursor control, and brutally
+tight RAM -- by Citadel 2.0, every bugfix required finding a string
+which could be moved from RAM to disk in order to free up enough
+memory for the new code -- had a lot to do with my failure to add
+anything fundamentally interesting to the original design.)
+ 
+ Anyhow, happy tenth anniversary to an orphan design that has done
+amazingly well for itself!  I'd like to believe that it has done more
+good than harm in its first decade, and hope it will do so in its
+second.  More importantly (Citadel badly flunking the Turing Test!),
+kudos to the guys who have maintained it (*) -- when it works, you
+get no credit, when it breaks you get no peace, right? -- and best
+wishes to everyone using it: You *are* the point of the whole
+exercise, after all.  If Citadel has let you spend a little more time
+on positive communication, and a little less time on software-induced
+aggravation, then it has accomplished what I'd hoped.  Do me a favor,
+folks: be nice.  Life is too short to waste time exploring the alternatives.
+ 
+ CrT
+ 
+ (*) Well, yes, perhaps an apology *is* in order on the original code
+quality.  Citadel was the first program in which I thought seriously
+about coding style, and the last written without object-oriented
+techniques.  It started as a single file, and whenever a file grew too
+big to edit or compile, it was broken in two, fairly arbitrarily.  The
+point was more to demonstrate a design and influence other BBSs than
+to provide a polished implementation.  But honestly: You got what you paid
+for.  Life holds worse fates...  End somewhat unapologetic apology.
+ 
+
+
+

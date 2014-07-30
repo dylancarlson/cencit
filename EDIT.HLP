@@ -1,0 +1,13 @@
+ >2A0<-bort           : - Aborts message.
+ >2C0<-ontinue        : - Continues message where you left off.
+ >2F0<-ind + Replace  : - Go through and prompt at each occurance of of the
+                       search string and whether it is the one you want
+                       to replace.
+ >2P0<-rint formatted : - Prints out message formatted for system.
+ >2R0<-eplace text    : - Finds the last occurance of textand replaces it
+                       with the new  specified text.
+ >2S0<-ave message    : - Saves message into message base.
+ >2W0<-ord count      : - Counts number of words in message, and prints
+                       the total on screen.
+ >2?0<                : - Prints file (edit.mnu).
+

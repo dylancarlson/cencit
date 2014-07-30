@@ -1,0 +1,36 @@
+        Combined non-Wash. Grid:   
+      Group 2 "Texas"         { "US/TX/214" "US/TX/512" } 
+      Group 3 "All_Other"     { "US/CA/215" "US/OR/503" "US/VA/703" } 
+      Group 3 "All_Other"     { "US/DC/301" "US/AK/907" } 
+ 
+      C C C C C C H H M M M R S T T T T V 
+      D E F H S Z A C D F O E A 5 D L N G 
+      C N   Z     C   L   S   L D R I E R 
+                                         | 
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 
+ CDC |=      |       |    q  |           | 
+ CEN |  =    |       |       |           | 
+ CF  |    = d|    d  |  d   d|d          | 
+ CHZ |    d =|    d  |       |d       d  | 
+ CS  |       |= d    |  d    |  d        | 
+ CZ  |       |d =    |       |  d        | 
+ HAC |       |    =  |  q    |q          | 
+ HC  |       |      =|    q  |  d        | 
+ MDL |       |       |= q   d|  d        | 
+ MF  |    d  |d   q  |q =   q|q q d q d  | 
+ MOS |q      |      q|    =  |  d        | 
+ RE  |    d  |       |d q   =|  q        | 
+ SAL |    d d|    q  |  q    |= q d      | 
+ T5D |       |d d   d|d q d q|q =   q   d| 
+ TDR |       |       |  d    |d   =      | 
+ TLI |       |       |  q    |  q   =    | 
+ TNE |      d|    d  |  d    |        =  | 
+ VGR |       |       |       |  d       =| 
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 
+ 
+     PLA  nets with ? 
+ 
+     d = Net 1    q = QuickNet    5 = Net 1.5 
+ 
+ 
+

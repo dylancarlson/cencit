@@ -1,0 +1,35 @@
+  2HELP0
+
+  Commands work two ways:  single-key and multiple-key.  To enter a
+single-key command, simply press that key.  To enter multiple-key
+commands, press the '.' key, the key for that command, and any parameters.
+
+  Most single-key commands are default forms of multiple-key commands.
+For example, typing G will goto the next room with new messages, while
+.G(roomname) will go to the room (roomname).
+
+  Typical commands commonly used include:
+
+    2L0 -- Will login to the system.
+    2N0 -- Will read new messages in a room.
+    2E0 -- Will let you enter a message.
+    2G0 -- Will go to the next room with unread messages.
+    2T0 -- Will log you off and hangup.
+
+  .2EE0 -- Will let you enter a private message.
+  .2ER0 -- Will let you create a new room.
+  .2EC0 -- Will let you change your terminal configuration.
+  .2TS0 -- Will log you off without hanging up, someone with you can
+         login without having to call back.
+
+  To get a list of options for each command, you can
+use the following conventions:
+
+  .2E?0 -- Lists options for the Enter command.
+  .2H?0 -- Lists options for the Help command.
+  .2K?0 -- Lists options for the Known command.
+  .2R?0 -- Lists options for the Read command.
+  .2T?0 -- Lists options for the Terminate command.
+
+  For more information, type .2H?0 to get a list of additional help topics.
+

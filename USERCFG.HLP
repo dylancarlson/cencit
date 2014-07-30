@@ -1,0 +1,43 @@
+                            **  HELP SETUP  **
+
+ Configuration is important to the user.  Without proper configuration, the
+ user can experience problems trying to read the message base properly.
+ The sysop normally defaults the configuration setup list to correspond to
+ his/her system.  Once the user is logged in, the user can enter configuration
+ to change any/all defaulted settings to match his system.
+
+
+  SET UP CONFIGURATION FOR USER:
+
+  .RC  -- Read Configuration  - Shows you your existing configuration
+
+  .EC  -- Enter Configuration - Allows you to change your configuration
+
+  When changing your configuration you will recieve the following questions.
+
+   Enter Screen width [79] - How wide is your screen?
+   Enter #Nulls       [0]  - Do you need NULLS?
+   Uppercase (Y/N)[N]      - Does your system only support uppercase?
+   Linefeeds (Y/N)[N]      - Do you need automatic line feeds
+   Tabs (Y/N)[N]           - Can you support tabs?
+   Helpful Hints (Y/N)[N]  - Do you want online help screen?
+   List in Userlog (Y/N)[N]- Do you want your nym viewable
+                             in >R<ead userlog?
+   Print last old message on
+   N>ew message request (Y/N)[N]- Do you want to read the last message you
+                                  read on last log on?
+
+   Display room Descriptions (Y/N)[N]- Do you want to read room description?
+
+
+ PASSWORD:
+
+  .EP  -- Enter Password
+
+  This command lets you change your existing initials and password to a set
+  of new initials and password.  Each of these can be up to nineteen
+  characters long and contain any printable characters.
+  Passwords and intitials are unique to each user.
+
+  Related Topics
+  

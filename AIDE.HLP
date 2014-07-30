@@ -1,0 +1,250 @@
+
+                       3** AIDE HELP FILE **0
+
+  3.AA0-ttributes  - Sets a file in a directory to hidden/read only.
+  3.AC0-hat     - Overrides nochat.  Allows you to page the sysop.
+  3.AE0-dit room (Default) - Edit an existing room
+
+3*0   3A0-pplication:- Do you want this room to have an application?
+     An application is any program that is run in a shell of the system.
+     You are though limited to the size of the program, since the system
+     does take up some space when you shell.
+                   If [Y], system will respond:
+                   Enter Application filename
+                   Must have (filename.ext) Extension is optional.
+     Applications may be batch files, com files, or exe files.  They
+     must be in the #APLICPATH as found in your config.cit file.
+     You are only allowed one application per room.
+     Putting an "!" in front of the filename will cause Cit to write message
+     and log tab files to disk to give you maximium free memory for an
+     application.
+     Putting an "@" in front of the filename will cause Cit to not clear the
+     screen when invoking an application.  Should be use only with programs
+     that save screen information.
+
+     3C0-hange name:- Do you want to change the name of the room?
+     Allows you to rename the room, keeping all the messages in that
+     room and changing the room name in the table file.
+
+3*0   3D0-irectory Room:- Do you want this an upload/download room?
+     Creating download/upload rooms allows you and your users to
+     exchange Public domain software and text files.  You can have only 255
+     files in each directory room.
+            If it is a new directory room, system will show following
+            response:
+               No Drive and Path
+     This means that there is no drive letter or dos path to the drive.
+               Enter Path- Enter drive and path : C:\bbs\name of directory
+     When you create a new directory it should be on the drive that
+     your system files are in.  Directories can be named the same way
+     that you do when you create them from dos.
+            The system will show following response:
+               C:\bbs\name of directory does not exists.
+               Create:(Y/N)[N]- Do you really want this created?
+     When you answer with "Y", the system will create the directory path,
+     just like dos does.  It will not update any dos tree information if
+     you use a directory tree program.
+     After creating the directory room it will prompt you if you want
+      "3D0ownload only?"- This means anyone can download the files that are
+       in this area, but can not upload anything.
+      "3U0pload only?"- Same as download, this time the system will allow
+       only uploads and no downloads in this area.
+
+     3D0-isplay Room Descriptions:- Do you want room descriptions on?
+     Room descriptions are normally found in rooms that have a specific
+     topic, or if you want a message decribing the room's usage.
+            If [Y], system will respond:
+                Enter Room description filename
+                     Must have (filename.ext)
+     You can write your room description in any word proccessor program,
+     and or any ascii program.  Room description files must be found in
+     the #ROOMPATH as found in your Config.cit file.
+
+     3C0-hange Group:- Do you want to change the group that can
+                    access this room?
+     Allows you to change the defaulted group of this room to a specified
+     group.  If you do not have access to the group you are changing the
+     room to, the room will appear to be not there in the hallway.
+     A group only room will have a : at the end of the room name.
+     EXAMPLE- Magic:
+     If the group is locked, you can not change the room to that group.
+     To remove a group from a room, respond "Y" to change the group
+     and type <CR> for the group name.  This will remove the group and
+     make it a open room.
+
+     3H0-idden:- Do you want it hidden or public?
+     Making a room hidden will add a ) to the end of the room name.
+     EXAMPLE-   Magic)
+     The room will stay hidden until you type .Goto the complete name of
+     the room.  Once you type the complete name, the room will not leave
+     your known rooms, unless the name changes again.
+
+     3I0-nfo Line:- This is an online information text for specific rooms.
+     It differs from the "room Description" by allowing you to add into the
+     room table it's self a small blurb about the room.  This will show up
+     when a person does a .ki (known info) or a .kvi (known verbose info).
+     Helps when you have a series of rooms that are connected.
+
+     3M0-oderated:- Do you want to have this room moderated?
+     If a room is to be moderated, all messages in that room will not show
+     up for the regular user until they are released.  These rooms are
+     normally used for stories, network rooms to limit the messages
+     that are going over the net, and conversations that have a flow to them.
+
+3*0   3N0-etworked/Shared:- Do you want this room to net?
+     If a room is shared, any system that nets with you, that has the access
+     to that particular room, can request that room to be netted with that
+     particular system.  Unfortunately this can cause problems if a shared
+     room is in a group area, but is a null group room.  The node that is
+     requesting it can net it without the knowledge of the home system.
+     In any shared room, an user that is not a netuser, all their messages
+     will appear as moderated.
+
+     3P0-ermenant:- Do you want this room to stay on the system?
+     If you answer "Y" to this question, all rooms that are permenant will
+     stay on the system when you hit your maximium room number.  Those that
+     are not permenant will scroll off the room table and become nonexistant.
+     If you want rooms to scroll due to lack of conversation, do not answer
+     "Y".
+
+
+     3R0-ead only:- Do you want the users to be able to read only in
+                         this room?
+     When a room is read only, the sysop is the only person allowed to
+     post in that room.  Regular users can read the room, but are not allowed
+     to post any messages, whether e-mail or open.
+
+     3S0-ave:Confirm save and exit from room edit function.
+               After finishing with editting the room, save all changes.
+
+  3.AF0-ile set - Sets all files in (fileinfo.cit) that don't have comments.
+     All directory rooms have a fileinfo.cit.  It contains all information
+     about what is in that particular directory room.  Information of
+     size, name of file, who uploaded it, and any comments.  This
+     command allows you to set all uncommented files in that directory
+     room.
+
+  3.AG0-roup fn - Add/Remove access of user from specified group.
+     An aide can only add/remove someone to a group that is not locked from
+     aides.  A locked group simply means that the sysop does not want
+     the aides to add/remove themselves or others to and from that
+     group for some reason.
+
+  3.AH0-allway fn - Add/Remove room from hallway.
+    This allows you to add/remove a room from a hallway.  You can
+    add a room to more than one hallway.  The main usage of this command
+    is for moving rooms from one hallway to another, without loosing
+    all the messages in that room.
+    Another use of this command is normally found when a system has
+    more than one maintenance area.  Sometimes rooms are put in
+    separate maintenance areas to allow specific aides to assist in
+    helping that particular area of the board.
+    Also if you want to have a room in more than one hallway for better
+    coverage.  The only time a room will show up in two places at the
+    beginning, is when you first create a room.  You will find it in
+    the hallway you created it, and you will always find it in the
+    maintenance hallway.
+
+  3.AI0-nsert message - Insert last >k<illed (pulled) message into
+                   current room.
+    This allows you to insert a pulled message into the proper area.
+    Sometimes a user will post a message into a specific room that
+    the message doesn't belong in.  This command allows you to move
+    this message to a more appropriate room.
+
+ *3.AK0-ill room - Deletes room from system
+    When killing a room, make sure that if it is a windowed room to
+    unwindow it first.  Then kill the room.  All messages will be
+    destroyed,but a copy of those messages can be found in Dump.
+    When killing hallways, always kill the rooms that are in the
+    hallway first. After killing all the rooms in the hallway, unwindow
+    the last room and then kill it.  Then you may remove the hall.
+
+  3.AL0-ist group - List all groups.
+    If you are an aide only, you will see only those groups that are
+    not locked from aides.  If you are a sysop/aide, you will see all
+    groups that are on the system.
+              - List specific group.
+              includes all users, rooms and hallways with that access.
+    If you want to find out who is in a specific group, at the end of the
+    line, type the name of the group.  If it isn't locked,(if you are only
+    an aide), it will list out all users that are in the group, the rooms
+    the groups owns, and any hallways that the group has specific access to.
+
+  3.AR0-ename file - Rename a file in directory room.
+  Let's you rename any file in a directory room to a new name.
+
+  3.AS0-et file info - Sets comments in (Fileinfo.cit) for a specific file.
+  Similiar to the .Af command, this function will allow you to set
+  comments about the file in fileinfo.cit.  Since sometimes you
+  might drop in files into the directory from dos, you will need to
+  set the comments in the fileinfo.cit so users can find out what
+  the files are.  Also used when a fileinfo.cit is destroyed.
+  Or when you want to change an existing comment.
+
+  3.AU0-nlink File - Removes file from directory room.
+  Kills a file off the drive, and deletes the entry in the fileinfo.cit.
+
+  3.AV0-iew Help Text File - Views this text file (aide.blb)
+  Views the text file from within the aide command line.
+
+  3.AW0-indow hallway -Windows a room into a hallway.
+  The system will prompt you with either:
+  WINDOW(Y/N)[N] if the room is not windowed to anything.
+  UNWINDOW(Y/N)[N] if the room is windowed to anything.
+  Windowing and unwindowing rooms to and from a hallway can be tricky.
+  When windowing a room, the room now becomes a way to enter any hallway it
+  is connected to.
+  When unwindowing a room, the room no longer has access to the other
+  hallways it was connected to and or creates a one-way exit, allowing
+  you to make a room that technically disappears from the users .kr command.
+  In other words it can create havoc if properly used in a maze type setup.
+
+
+
+
+3 MISC Commands:0
+
+ Messages:
+ A moderated message is a message that only the aides and/or sysops can
+ see.
+ For Sysops: To set the system to only allow sysops to see and
+ release any moderated message, set in "Config.cit" #MODERATED to 0
+
+ There are three ways a message will be a moderated message.  One is the
+ problem user, one is the non-net user, and the last is in a moderated room.
+ All these messages will have the same "Release (Y/N)[N]" message at the
+ end of the message.  The only difference is that the non-net user's message
+ will only show this response in a shared room.  A Problem user messages's
+ will all have the response after each one he/she has left.  And a moderated
+ room, all users posting in there will have this response at the end of each
+ message.
+ To release any of the messages, answer "Y" at the prompt.
+
+ Killing a message is another function of an user /aide/sysop.
+ For Sysops: To set system to only allowing aides and sysops to kill
+ messages, set in "Config.cit" #KILL to 0.
+ To kill any message other than private e-mail, type "k" during the message
+ you want to remove.  The message will print out again and you will be asked
+ "PULL (Y/N)[N]", which is asking you to confirm your choice. At this point
+ the message will appear in the aide room.   You can only pull one message
+ at a time if you want to insert it.  To defeat the repeat of the message,
+ hit "n" and it will directly ask you "PULL (Y/N)[N]".  After killing a
+ message, if you want to insert that message into another room, goto the
+ room that you want to insert it in, and hit ".ai"(see aide insert command).
+
+ROOMS:
+ Rooms can be created by user/aides/sysops.
+ For sysops: To set system to allow only aides and sysops to create a room,
+ set in "Config.cit"  #ROOMOK to 1.  If you only want sysops to create a room
+ set #ROOMOK to 2.
+ When creating a room, the system will prompt you the following:
+       Enter name for new room: Must be under 20 characters long.
+       Make room public (Y/N)[Y]: Can make it either hidden or public.
+       Install "name of the room" as a public room (Y/N)[N]: Allows
+       you to not create the room if a mistake has been made.
+
+ At this point  >.ae< or just hitting >a< will allow you to edit the room
+ more thoroughly. (See .ae command).
+
+3*0:Designates Sysop only functions

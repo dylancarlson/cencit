@@ -1,0 +1,3 @@
+ Messages are formatted to each caller's screen width.  To defeat this
+formatting, start each line with a space.  Press return 'til you get a prompt
+to save message.

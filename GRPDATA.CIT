@@ -1,0 +1,58 @@
+
+  GRPDATA.CIT
+      this is the group by group configuration file for time
+			accounting under CenCit.
+      See ACCOUNT.doc for more information about accounting.
+
+ You MUST have an entry for your null group.
+#group              "null"   /* Group name in quotes                    */
+#days               any
+#hours              any
+#special
+#day_inc            20       /* Add 15 per day                          */
+#max_bal            20       /* And let it add up to a max of 15 per day*/
+#dl_mult           -1        /* Charge full time for downloads          */
+#ul_mult            0        /* Charge nothing for uploads              */
+#priority           1        /* This group isn't too important.         */
+
+#group              "reserved_2"
+#days               any
+#hours              any
+#special            
+#day_inc            20
+#max_bal            40
+#dl_mult            "-1" /* charge Full time transfer took.     */   
+#ul_mult            "0"   /* free */
+#priority           15
+
+#group							"Friends"
+#days               any
+#hours              any
+#special            0 1 2 3 4 5
+#day_inc            30
+#max_bal            60
+#dl_mult            "-.8" /* charge 8/10 time transfer took.     */   
+#ul_mult            "0"   /* free */
+#priority           20
+
+#group							"Better friends"
+#days               any
+#hours              any
+#special            0 1 2 3 4 5
+#day_inc            90
+#max_bal            150
+#dl_mult            "-.1" /* charge 1/10 time transfer took.     */   
+#ul_mult            "2.5"   /* gain more time */
+#priority           50
+
+#group							"Most trusted friends"
+#days               any
+#hours              any
+#special            0 1 2 3 4 5
+#day_inc            90
+#max_bal            150
+#dl_mult            "0"   /* free */   
+#ul_mult            "3"   /* really gain time */
+#priority           50
+
+

@@ -1,0 +1,22 @@
+ 2HELP SURNAMES0
+
+ 2--- General ---0
+
+ Surnames are a brief decsriptory field placed before a user's name.  Some
+BBS's do not use surnames.  Some allow only the SysOps to change them, and
+other boards allow any user to change thier own surname.  The surname is
+not part of the user name, but simply a displayed field.
+
+ 2--- Changing surnames ---0
+
+ .ES  -- Enter Surname
+
+ This command will allow you to enter a surname on some Citadels.  Or
+it may tell you "-- Users cannot enter thier own surnames".  To get a
+surname there, you must ask the SysOp for one.	Some systems have no
+surnames at all.
+
+ 2--- Related Topics ---0
+
+ .h CONFIG
+

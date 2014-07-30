@@ -1,0 +1,98 @@
+      Group 1 "Washington"    { "US/WA/206" "US/WA/509" } 
+ 
+      A A A C C C C F F F G G G I M M M M M P P R S S S S T T T T T X 
+      I M Q 5 C D Y A R T O S S N A E I I O R S D I N O U G L N R T A 
+        B U 1     B N E P L 2 P   D M C L C         O B N I C M     N 
+                      D T                                            | 
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 
+ AI  |=    |     |         |       |         |         |d   d d|     | 
+ AMB |  =  |     |    d    |       |    d    |         |d   d d|d    | 
+ AQU |    =|    B|         |       |  d   d d|        d|    d d|     | 
+ C51 |     |=    |         |       |d        |         |       |  q  | 
+ CC  |     |  =  |5   q    |5   d  |5     5  |         |       |     | 
+ CD  |    B|    =|         |       |         |         |    B  |     | 
+ CYB |     |  5  |=        |       |         |         |       |     | 
+ FAN |     |     |  = d    |       |         |         |    d  |     | 
+ FRED|  d  |  q  |  d = q  |  d   d|d     d  |q d   d d|d   q d|  q  | 
+ FTPT|     |     |    q =  |       |         |      q  |d     d|     | 
+ GOL |     |     |        =|5      |5     d  |  d      |      d|     | 
+ GS2 |     |  5  |        5|=      |5        |         |       |     | 
+ GSP |     |     |    d    |  =    |         |         |    d  |  q  | 
+ IN  |     |  d  |         |    = d|d        |         |       |  q  | 
+ MAD |     |     |    d    |    d =|         |         |      d|     | 
+ MEM |     |d 5  |    d   5|5   d  |=       d|    d    |d   d d|     | 
+ MIC |    d|     |         |       |  =      |         |    d  |     | 
+ MIL |  d  |     |         |       |    =    |         |  d    |     | 
+ MOC |    d|  5  |    d   d|       |      = d|         |    d d|     | 
+ PR  |    d|     |         |       |d     d =|         |       |     | 
+ PS  |     |     |    q    |       |         |=       d|    d  |     | 
+ RD  |     |     |    d   d|       |         |  =      |  d   d|     | 
+ SI  |     |     |         |       |d        |    =    |       |  q  | 
+ SNO |     |     |    d q  |       |         |      =  |d      |     | 
+ SOB |    d|     |    d    |       |         |d       =|d   d  |     | 
+ SUN |d d  |     |    d d  |       |d        |      d d|=     d|     | 
+ TGI |     |     |         |       |    d    |  d      |  =    |d    | 
+ TLC |d d d|    B|  d q    |  d    |d d   d  |d       d|    = d|d   B| 
+ TNM |d d d|     |    d d d|      d|d     d  |  d      |d   d =|d    | 
+ TR  |  d  |     |         |       |         |         |  d d d|=    | 
+ TT  |     |q    |    q    |  q q  |         |    q    |       |  =  | 
+ XAN |     |     |         |       |         |         |    B  |    =| 
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 
+ 
+     d = Net 1    q = QuickNet    5 = Net 1.5    B = bridge 
+ 
+  Nodes which net with few other nodes are listed below: 
+ 
+ AC   nets with  FRED(d) 
+ AF   nets with  TLC(d) 
+ AST  nets with  MEM(d) 
+ BT   nets with  FRED(q), TNM(d) 
+ DF   nets with  TLC(d) 
+ DRE  nets with  ?? 
+ DV   nets with  MEM(d), TGI(d) 
+ JIF  nets with  FRED(d) 
+ MAX  nets with  MOC(d), SOB(d), TLC(d) 
+ NET  nets with  TLC(d) 
+ SSGC nets with  CC(d) 
+ SUN1 nets with  ?? 
+ TIP  nets with  DV(d) 
+ TB   nets with  TR(d), TLC(d) 
+ TGD  nets with  TSG(d), FAN(d), MEM(d) 
+ TST  nets with  FRED(d) 
+ TP   nets with  MEM(5) 
+ TSG  nets with  PS(d) 
+ TSG1 nets with  FTPT(d), PS(d) 
+ TV   nets with  C51(d) 
+ 
+ 
+  { The IronHenge Network }                   { The StoneHenge Network } 
+ 
+      A D E G H I R S S S T T T X                 4 B C C M O 
+      N I R W A N B K P S H L R A                 0 R A D A U 
+      T A E N L F O P C G U D H N                 8 I     Y T 
+                        H        |                6 G        | 
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+               +-+-+-+-+-+-+ 
+ ANT |=       h   h h h         h|           4086|=       h  | 
+ DIA |  =                       h|           BRIG|  =   h h  | 
+ ERE |    =                     h|           CA  |    =   h  | 
+ GWN |      =                    |           CD  |  h   = h  | 
+ HAL |h       = h                |           MAY |h h h h = h| 
+ INF |        h =       h   h    |           OUT |        h =| 
+ RBO |h           =              |               +-+-+-+-+-+-+ 
+ SKP |h             =           h| 
+ SPC |h               =          |               h = HengeNet 
+ SSGH|          h       =     h  | 
+ THU |                    =     h| 
+ TLD |          h           =    | 
+ TRH |                  h     =  | 
+ XAN |h h h h       h     h     =| 
+     +-+-+-+-+-+-+-+-+-+-+-+-+-+-+ 
+ 
+     h = HengeNet 
+ 
+  Nodes which net with few other nodes are listed below: 
+ 
+ SID  nets with  ? 
+ UTEC nets with  ? 
+ 
+

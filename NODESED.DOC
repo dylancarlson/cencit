@@ -1,0 +1,164 @@
+
+                                 NODESED
+                         A Utility for Citadel
+
+            Copyright (c) 1991          Centauri Enterprises
+
+
+       This program is provided as is.  No warranty, expressed or
+     implied, is offered.  Use at your own risk.  This document must
+     accompany all copies of this program.  All other rights reserved.
+     Prices and specifications subject to change without notice.
+
+       Any commercial or business use of this program requires prior
+     registration.
+
+
+                                 Usage
+       
+       This program may be used to edit existing node entries in the 
+     nodes.cit file or create new ones.  It also will read an optional data 
+     file from another sysop for networking purposes allowing you to add 
+     your group and room names to the ones shown from the other system.
+       If you have indented lines in a current node, they will not be read 
+     in by this editor.  They will, however be written back to your 
+     nodes.cit file.  All unrecognized fields will be written back to the 
+     nodes.cit file even though the editor will not process them.  This 
+     program can also be used to create the data file needed by a new node 
+     to be read in at their site.
+
+                            The Line Editor                              
+       Every prompt in the system except help screens and error windows 
+     employ a very special line editor.  You can, with this line editor, 
+     change any part of a prompt without having to re-type it.
+       The summary of commands follows:
+                       
+           Home                        Beginning of line
+           End                         End of line
+           Cursor left                 Left one character
+           Cursor right                Right on character
+           Control Cursor left         Left one word
+           Control Cursor right        Right one word
+           Insert                      Toggle Insert mode on/off                   
+           Delete                      Delete character under cursor  
+           Backspace                   Delete character before cursor
+                                         
+                              
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 
+                                 - 1 -
+                            
+                            
+                            The Line Editor                              
+                              (Continued)                              
+                              
+       You will also notice that if a prompt is wider than the window, that 
+     the input "scrolls" sideways.  This allows you to input more than 
+     would fit on a single line.  Up and down arrow keys may be used to get 
+     to previously entered data.  Page Up and Page down may also be used to 
+     quickly access multiple pages of data.  A summary of the help may be 
+     seen by entering Alt H.  Individual help for each line may be seen by 
+     entering Alt F (if the help exists).  
+       
+       The following is a description of the special functions:
+     
+       Alt M allows you to move the window around the screen with the 
+     cursor keys. Use the Escape key when the window is where you want 
+     it.  Alt C allows you to change various things about a window.  You 
+     may change a windows foreground color, background color, border 
+     color, border type, appearance type, and shadow type.  Alt Z will 
+     bring up a help window explaining the function keys needed to change 
+     the window once you have entered Alt C.  Alt D brings up an on-line 
+     calender that can be scrolled through.  Left and right cursor move a 
+     day at a time, up and down cursor move a week at a time, page up and 
+     page down move a month at a time, and finally, home and end move a 
+     year at a time.
+                              
+				NodeConv
+       This program is a simple data-to-text and text-to-data file
+     conversion program for those of you without QuickNet capabilites.
+       Simply type in nodeconv and answer the prompts for the filenames.
+     
+       To send your new data to another site convert the data file to text 
+     and merge it into an E-Mail message for the other SysOp.  Since the 
+     conversion program looks specifically for two double quotes at the 
+     beginning and end of the actual new node data, you are free to put 
+     comments in this message before and after the merged in text file.  DO 
+     NOT alter this data by removing the space at the beginning of the line 
+     or by removing any of the double quotes or the other site will not be 
+     able to convert the text data back to an internal structure.
+                              
+       If you are the recipient of the E-Mail message you will need to 
+     capture this message to disk. (Most Citadels either have a capture to 
+     disk function or you could turn your print file on and re-display the 
+     message).   Then run nodeconv.
+     
+                              Installation 
+       Copy this program into your DOS path or your Citadel home directory. 
+     This program MUST be run in your home directory as it needs to be able 
+     to read "nodes.cit" and "config.cit".
+     
+
+
+
+                                 - 2 -
+
+
+
+
+                              Registration
+
+
+       NODESED is not a free, or public domain program, it is copyrighted
+     by the author.  NODESED is being marketed as shareware.  If you find
+     it useful, please register it.  This will encourage the author to
+     enhance this program, and create other useful tools.  The author
+     grants you a license to use NODESED for a reasonable trial period.
+     You make make as many copies as you like, and distribute these
+     copies for the purpose of trial of this software.  You may not
+     charge a fee of any kind for this software, it's distribution or
+     handling.  This program may not be sold as part of another
+     product without prior written consent of the author.
+
+       If you find this program has value to you, register it by
+     sending $10.00, along with your name, address, telephone number,
+     and E-Mail addresses to the address below.  Please include the
+     name and version of the program you are registering.  You will
+     receive notices of new versions, and other products from Centauri
+     Enterprises, as well as limited technical support via our
+     electronic mail services for a period of 3 months.
+
+       Please E-Mail your comments to me.  I can be reached at:
+
+       DragCit Net:   Centauri @ Centauri's Place
+
+       Or write:
+
+       Brad L. Johnson
+       Centauri Enterprises
+       7942 Fall Creek Rd #302
+       Dublin, Ca 94568
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                 - 3 -

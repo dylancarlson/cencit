@@ -1,0 +1,56 @@
+swap.obj +
+c:\usr\b\lib\c0l.obj +
+dosysop +
+doaide +
+doupdown +
+dochat +
+doenter +
+dogoto +
+doread +
+ctdl.obj +
+command.obj +
+ibmcom.obj +
+input.obj +
+modem.obj +
+output.obj +
+port.obj +
+timedate.obj +
+video.obj +
+window.obj +
+account.obj +
+format.obj +
+grphall.obj +
+idle.obj +
+init.obj +
+library.obj +
+log.obj +
+machine +
+misc.obj +
+msg.obj +
+msg2.obj +
+rooma.obj +
+version.obj +
+aplic.obj +
+config.obj +
+cron.obj +
+edit.obj +
+music.obj +
+files.obj +
+infofile.obj +
+info.obj +
+log2.obj +
+log3.obj +
+misc2.obj +
+msg3.obj +
+net.obj +
+sysop1.obj +
+roomb.obj +
+xmodem.obj +
+zipfile.obj
+fccit.exe
+fccit.map
+c:\usr\bc\lib\EMU.LIB +
+c:\usr\bc\lib\MATHL.lib +
+c:\usr\bc\lib\CL.lib
+
+

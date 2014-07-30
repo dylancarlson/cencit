@@ -1,0 +1,257 @@
+
+       ¯¯ SYSOP COMMANDS MENU, TurboCit Version 4.00.40+ ®®
+
+ There are two ways to access the sysop menu:
+
+ (1) Press F6 at console to get the PRIVILEGED FUNCTION: prompt and
+     press the question-mark key "?" to receive the sysop menu.
+     If you have chosen to lock the F6 key with a password, the sysop
+     must first be logged-in.  You may use F6 with a user on-line.
+
+ (2) A sysop logged-in (either console or remote) enters ".S" at a room
+     prompt, and presses the question-mark key "?" at the PRIVILEGED
+     FUNCTION: prompt to receive the same menu.
+
+ PLEASE NOTE! Sysop commands marked with an asterisk (*) take effect on
+ the hall or room you are in at the time they are executed.
+
+        ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+        ³ ¯¯ DETAILED EXPLANATION OF SYSOP COMMANDS ®® ³
+        ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ A - ABORT     Quits 'Privileged function:' and returns sysop to bbs.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ C - CRON      A = All Done: sets every cron event as done.
+                   TurboCit then waits until the appropriate time
+                   to execute the events again.
+
+               D = Done Event: sets an individual event as done.
+                   TurboCit then waits until the appropriate time
+                   to execute the event again.
+
+               E = Enter Cron File: reloads the CRON.CIT file so
+                   changes can be made to it without exiting
+                   TurboCit.  All events are set to UNDONE.
+
+               L = List Events: gives a complete listing of cron
+                   events and their current status.  An example
+                   of List Events may be found at the end of this
+                   section.
+
+               R = Reset Event: resets individual events as UNDONE,
+                   and will execute them at the earliest moment
+                   possible.
+
+               Z = Zap Event: removes event from current cron list
+                   so that it will not be executed, but does NOT
+                   remove it from the cron file.
+
+               ? = Shows sysop a menu of these functions.
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ EXAMPLE OF LIST EVENTS ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³##         TYPE                       String  Redo Retry Last             ³
+ ³01¯ C   SHELL_1,                $EXAMPLE.BAT,  720,    5 N/A              ³
+ ³02      SHELL_1,               $EXAMPLE2.BAT,  720,    5 N/A              ³
+ ³03      NETWORK,                   TURBOTECH,  480,   30 06:00:50 90Apr22 ³
+ ³04 ş    SHELL_1,               $EXAMPLE3.BAT,  240,   15 08:14:45 90Apr22 ³
+ ³05      SHELL_1,               $EXAMPLE4.BAT, 1170,   30 10:32:14 90Apr22 ³
+ ³                                                                          ³
+ ³¯ - This is the next cron event that will be attempted.                   ³
+ ³ş - This is the next valid cron event.                                    ³
+ ³C - This is a chained event; the next one will also be attempted.         ³
+ ³    If the next event is also chained, then the NEXT event will also      ³
+ ³    be attempted.  This continues until TurboCit comes to an event NOT    ³
+ ³    chained, or loops back to the first event.                            ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+ D - DATE      Changes system date and time.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ E - ENTER EXTERNAL.CIT and GRPDATA.CIT files
+               Allows the incorporation of information contained in
+               these two files.  Useful for re-reading these files
+               without exiting to DOS.  For example, a sysop may add
+               or modify file transfer protocols by editing EXTERNAL.CIT
+               and <e>ntering the changed file without exiting to DOS.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ F - AIDE      Enables sysop to access aide commands from the
+     SPECIAL   sysop menu.  Please see Aide Menu Commands.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ G - GROUP     G = Global group membership: allows sysop to
+     SPECIAL       add or remove the entire userlog to a
+                   specific group.  Prompts for each user.
+
+               K = Kill group: permanently removes a group.
+
+               N = New group: creates a new group.
+
+               R = Rename group: allows sysop to give a group a
+                   new name, or by entering nothing at the new
+                   name prompt, to change group attributes.
+
+               U = User global membership: allows sysop to add or
+                   remove a specific user from several groups at
+                   one time.  Prompts for each group.
+
+               ? = Shows sysop a menu of these functions.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ H - HALLWAY   F = Force: allows sysop to force entry into a specific
+     SPECIAL       hall.  Helpful if you forget to window a hallway.
+
+              *G = Global hallway: allows sysop to go through the
+                   entire room list and either include or exclude
+                   rooms in the CURRENT hallway.
+
+              *K = Kill: allows sysop to kill the CURRENT hallway.
+                   Hallways cannot be killed unless all rooms and windows
+                   are removed first.
+
+               L = List: provides sysop with a listing of hallways.
+
+               N = New: allows sysop to create new hallways and
+                   set hallway attributes.
+
+               R = Rename: allows sysop to rename an existing hallway,
+                   or, by not entering a new name, change the hallway's
+                   attributes.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ K - KILL      Allows sysop to delete the account of any user.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ M - MASS      Allows sysop to delete every message on the bbs
+     DELETE    from any particular user.  The deleted messages are
+               put in the room Dump>.  Messages from networked
+               users may also be mass-deleted in this fashion.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ N - NEWUSER   Scrolls through all unverified users and asks if you
+     VERIFY    want to verify them.  If you choose not to verify, TurboCit
+               gives you the option of killing the account.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ O - OFF HOOK  Takes modem off-hook in console mode.  Please check with
+               your local telephone company before using this setting;
+               in a few areas, you should not use this feature.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+*R - RESET     Clears unused fileinfo entries from the current directory
+     FILEINFO  room.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ S - SHOW      Displays a user's configuration, groups, and other data.
+     USER
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ U - USERLOG   Allows sysop to change any user's name, settings, time and
+     EDIT      configuration.  Displays initials and passwords at console
+               only, but these cannot be edited.  Sysops may also set up
+               NODE accounts, and give users sysop and aide access with
+               this function.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ V - VIEW      Shows this textfile.
+     HELPFILE
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ X - EXIT TO   This is the proper way to exit TurboCit.  It allows the
+     MSDOS     creation of ETC.DAT and other system files which allow
+               quicker startup of TurboCit.  'X' and ALT-X are the only
+               correct ways to exit TurboCit.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ Z - ZAP       Deletes non-permanent rooms that contain no messages.
+     EMPTY     Permanent rooms are NOT deleted.
+     ROOMS
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ # - READ BY   Allows sysop to read public messages by number.
+     MSG #     Private messages cannot be viewed.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ * - WILDCARD  Allows sysop to mass delete files and unlink files from
+     UNLINK    directory rooms.  Prompts for confirmation before deleting
+               the listed files.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+ ? - MENU      Displays menu.
+ ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+                   ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+                   ³ ¯¯ CONSOLE ONLY FEATURES ®® ³
+                   ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+
+ ! - SHELL     Allows sysop at console to shell to DOS while TurboCit
+     ESCAPE    is running.  Typing EXIT returns to TurboCit.
+
+ @ - SUPER     Allows sysop at console to shell to DOS while TurboCit
+     SHELL     is running; frees up all but 168k of the memory used
+     ESCAPE    by TurboCit.
+
+ ALT-B         Toggles "PSYCHOCHICKEN" textmode on and off.
+               This forces letters to be translated into an alternating
+               pattern, for example: tHiS Is WhAt a UsEr mAy sEe!
+               This is used only to have harmless fun with users.
+
+ ALT-C         Puts user into CHAT with the sysop.  Same as 'F8'.
+
+ ALT-D         DEBUG mode for programmers.  Do not use.  If toggled
+               on, your users will see extra output on the screen
+               which only has meaning to the programmer.
+
+ ALT-E         Do EVENT.  TurboCit checks for a cron event, and if
+               one is scheduled to be done, it will force it to
+               happen at that time.
+
+ ALT-L         CONSOLE LOCK.  If you have set a console password in
+               configuration, the system will require it before
+               allowing the 'F6' key to be used for sysop functions.
+               Pressing ALT-L prompts TurboCit to ask for the password
+               and unlock the F6 key.  Pressing ALT-L again locks the
+               console once more.
+
+ ALT-P         PRINT on/off.  Toggles screen output to a file; normally,
+               the PRINTER.OUT file in the TRAP subdirectory.
+
+ ALT-T         TWIT users.  Allows sysop to review and choose whether
+               to release all messages entered by 'twitted' users.
+               Users have no way of knowing whether they are twitted
+               or not, as they can always see their own messages.
+               Sysops and aides can also see the messages and release
+               them if they so choose.  However, regular users cannot
+               see any twitted messages until they have been released.
+               This command has the same effect as making a user a
+               PROBLEM_USER in the 'Userlog Edit' menu.
+
+ ALT-X         EXIT to MSDOS. This is the proper way to exit TurboCit.
+               It allows the creation of a file called ETC.DAT and
+               other system files which allow quicker startup of
+               TurboCit.  'X' and ALT-X are the only correct ways to
+               exit TurboCit.
+
+ PAGE-UP       If accounting is on for the current user and the system.
+               Hitting page-up adds 10 minutes to the users account
+               balance. It will only add up to the maximum balance the
+               users may have according the information from GRPDATA.CIT.
+
+ PAGE-DOWN     If accounting is on for the current user and the system.
+               Hitting page-down subtracts 10 minutes from the users
+               balance. It will not take them below 0 minutes.
+
+ HOME          If accounting is on for the system. Hitting home will
+               activate accounting for the current user.
+
+ END           If accounting is on for the system. Hitting end will
+               de-activate accounting for the current user.
+
+ ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
+ ³                       ¯¯ SPECIAL SYSOP COMMANDS ®®                       ³
+ ³                                                                          ³
+ ³  SHIFT-F6    AIDE STATUS                                                 ³
+ ³              Toggles a user who is currently logged-in to Aide status.   ³
+ ³              Press SHIFT-F6 to remove Aide status.                       ³
+ ³              Only works at console with F6 key unlocked.                 ³
+ ³                                                                          ³
+ ³  ALT-F6      SYSOP STATUS                                                ³
+ ³              Toggles a user who is currently logged-in to Sysop status.  ³
+ ³              Press ALT-F6 again to remove Sysop status.                  ³
+ ³              Only works at console with F6 key unlocked.                 ³
+ ³                                                                          ³
+ ³  FILE        .E*M - enter filelinked message.                            ³
+ ³  LINKED      .EE*M - enter exclusive filelinked message.                 ³
+ ³  MESSAGES    .EL*M - enter limited access filelinked message.            ³
+ ³                                                                          ³
+ ³              Only a sysop may enter filelinked messages.  Filelinking    ³
+ ³              causes TurboCit to print the contents of a specified text   ³
+ ³              file on the screen after a normal message header.           ³
+ ³                                                                          ³
+ ³              Only sysops may enter filelinked messages, at console       ³
+ ³              or remote.  The entire DOS path of the file, including      ³
+ ³              drive letter, must be specified.  Wildcard file names       ³
+ ³              are not allowed.  Filelinked messages do not network.       ³
+ ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+

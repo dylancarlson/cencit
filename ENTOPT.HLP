@@ -1,0 +1,23 @@
+ .2EA0-pplication :- Enters application that is in that room.
+ .2EC0-onfiguration :- Configuration commands
+ .2ED0-efault Hallway :- Allows you to enter a default hallway that you
+                       will enter into when you log in always.
+ .2EE0-xclusive Message:- Sends private exclusive mail to specified individual.
+ .2EF0-orwarding Address:- Routes exclusive mail to new name.
+ .2EG0-roup only message:- Posts message into specified group.
+ .2EH0-allway:- Go to specified hallway.  Hallway must be windowed to the room/
+              hallway you choose.
+ .2EL0-imited-Access:- Post message into specified group.  One more keystroke
+                     than .eg.
+ .2EM0-essage:- Allows you to post a message into the message base.
+ .2EO0-ld-Message:- Enters aborted message and allows you to continue to work
+                  on aborted message.
+ .2EP0-assword:- Changes password and initials.
+ .2ER0-oom:- Creates a new room.
+ .2ET0-extfile:- Allows user to upload/type an ascii text-file.
+ .2EW0-C-Protocol (Xmodem):- Enters into upload WC (Xmodem internal Protocol).
+ .2EX0-clude Room:- Excludes room from normal >G<oto loop.
+                  Typing same command in a >.ex< room will unexclude room,
+                  and add it back into the goto loop.
+ .2E?0 :- Prints out file (entopt.mnu).
+

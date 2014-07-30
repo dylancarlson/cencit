@@ -1,0 +1,128 @@
+06-05-91 BLJ Version 1.0
+        Initial release from FredCit source dated January 1991 with the 
+        following changes/enhancements:
+         
+        Added word search function to the extended read.  Use w to enable.
+                
+        Added ability to increment or decrement time on system for logged 
+        in user by entering PageUp or PageDown respectively. 10 Minutes is 
+        added or subtracted each time one of these keys are pressed.
+                
+        Added ability to turn accounting on or off for logged in user 
+        using Home and End keys respectively.
+                
+        Changed the way the configuration displays.  Now uses a bar graph 
+        instead of counting individual log entries, messages, and rooms.
+                
+        Added Secondary help path to prevent duplication and disk waste 
+        for multiple sub-boards.
+                
+        Made the display of IBM extended characters at the end of a 
+        roomname sysop configurable.  In config.cit, if the parameter 
+        #IBMROOM is 0 - the normal characters will display.
+                
+        Put code in for save message to disk.  Type c while message is 
+        displaying.
+                
+        Added ability to un-zap zapped cron events.
+
+06-06-91 BLJ Version 1.1
+        Fixes to idle (screen-saver code).
+        
+        Fixes for local netting multiple events.
+
+06-07-91 BLJ Version 1.2
+        Fix for reading external.cit #PROTOCOL lines
+
+06-07-91 BLJ Version 1.3
+        Changes to the status line appearance.
+
+06-12-91 BLJ Version 1.4
+	Added bit flags to the userlog for off-line reader, no chat, trap
+	to print file per user.
+
+	Fixed the test for re-configuration.
+
+	Changed the sound of the chat bell.
+
+	Added display of new flags - Reader, no Chat, trap to print File in
+	read userlog (only if sysop).
+
+	Added code for Off-line Reader (.z)
+
+	SysOp configurable Chat Bell - See Docs for snd.com in readme.snd
+
+	Cron events timed down to 15 minutes.  Use the form of 7:45 or 18:15
+	In case of inexact quarter hour the system rounds down to the
+	nearest quarter hour.
+
+	Fix to cron time Now has the ability to do time ranges.
+	Example:	7:45-12:15
+
+06-30-91 BLJ Version 1.5
+	Added the sound flag to the userlog - a sysop can enable a user for
+	this function (Until the rest of the code is in place)
+
+	Added the ability to display rooms in 2 columns or all together.
+
+	Added a prompt for New Groups, Rename Group.  It now asks if this
+	is to be a default group - If yes, newusers will be added to this
+	group.
+
+	Improved the Hallway kill command.  If rooms are on that hall, you
+	are told so and if you continue, the rooms will be removed.
+
+	Improved the room kill command, If that room is a windowed room, you
+	are warned of this. (If you kill your primary hallway movement room
+	you will really have a mess!!)
+
+07-02-91 BLJ Version 1.6
+	Fixed the .goto room command.  The system will now tell you either
+	"no 'roomx'" -or- "no 'roomx' on this hall" if the room exists but
+	the user is on the wrong hallway.
+
+07-04-91 BLJ Version 1.7
+	Added the Sound Capabilites for both user and Sysop.  A ^BM (music)
+	and ^BS (sound) begins the sequence and ^BE ends the sequence.	A
+	maximum number of sound entries per user visit is SysOp configurable
+	by the #MAXSOUND field in config.cit.  Also, Music and sound effects
+	may be turned of at the console only by the F7 key.  This key is now
+	a triple toggle. No sounds of any kind, bells on, bells and sounds
+	on.  This is reflected on the status line by ~, ,  respectively.
+
+	.ec will allow a user to turn on sound for themselves.
+
+	The sound code imbedded in messages will be stripped before
+	networking PROVIDED that the node does NOT have the sound flag on in
+	their userlog entry.	This ability prevents us from screwing up the
+	network, but also allows sound to be transmitted to other CenCit's.
+
+	Added support for the baud rate 38400.	I hope it works as intended.
+
+07-05-91 BLJ Version 1.8
+	Added a Q to quit out of .ae (Aide Edit Room).	Save now defaults to
+	Yes.
+
+	Added .ky for known anonymous rooms, also changed .ae from o to y for
+	consistency.
+
+07-05-91 BLJ Version 1.9
+        Made a fix to local netting that was causing some "phantom" Aide 
+        messages
+
+        Made the header in anonymous rooms look the same for the sysop as 
+        the users unless using Verbose reads.
+07-08-91 BLJ Version 1.10
+        Fixed the rotating blurbs for non-ANSI users.
+        
+        Fixed the bunny filter for sound and music entry.
+        
+07-09-91 BLJ Version 1.11
+        Minor clean-up in message entry when music is used.
+        
+07-09-91 BLJ Version 1.12
+        A little more fine tuning on Music Message entry.
+        
+        Added the userlog flag for maxsound per user per day.  Not yet 
+        implemented.
+        

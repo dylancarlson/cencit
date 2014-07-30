@@ -1,0 +1,58 @@
+
+                       StringFormat Documentation
+
+        This file and the program STRF.EXE are provided to help you
+    configure your time/date stamp for CenCit.	It takes the format string
+    as a command line argument, using quotes if it contains spaces.  There is
+    an 80 character limit on the final output.
+
+    EXAMPLE:  STRF "%B %d %Y, %I:%M:%S %p %Z"
+
+       Note:  4DOS Users:
+    EXAMPLE:  STRF `"%B %d %Y, %I:%M:%S %p %Z"`
+
+              A normal DOS time/date stamp for 12/30/88 10:05:00 PST
+              would become:
+
+              December 30 1988, 10:05:00 AM PST
+
+    NOTE:     The time zone may be reset by putting this command line in
+              the autoexec.bat file.
+
+              set TZ=XXX#XXX
+                      ^ ^ ^
+                      | | \ optional second time zone name.
+                       \ \  number of hours difference from GMT. 8 for PST.
+                        \   Time zone name.
+
+              set TZ=EST5EDT
+
+              This would be a setting for Eastern Standard time zone.
+
+    Formats as follows:
+
+    %a  abbreviated weekday name
+    %A  full weekday name
+    %b  abbreviated month name
+    %B  full month name
+    %c  standard date and time string
+    %d  day-of-month as decimal (1-31)
+    %D  day-of-month as decimal (01-31)
+    %H  hour, range (0-23)
+    %I  hour, range (1-12)
+    %j  day-of-year as a decimal (1-366)
+    %m  month as decimal (1-12)
+    %M  minute as decimal (0-59)
+    %p  locale's equivalent of AM or PM
+    %S  second as decimal (0-59)
+    %U  week-of-year, Sunday being first day (0-52)
+    %w  weekday as a decimal (0-6, Sunday being 0)
+    %W  week-of-year, Monday being first day (0-52)
+    %x  standard date string
+    %X  standard time string
+    %y  year in decimal without century (00-99)
+    %Y  year including century as decimal
+    %Z  timezone name
+    %%  the percent sign
+
+

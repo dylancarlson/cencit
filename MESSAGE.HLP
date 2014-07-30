@@ -1,0 +1,66 @@
+  HELP MESSAGE
+
+  Reading Messages.
+
+  F    -- Read all messages in forward order.
+  N    -- Read new messages.
+  O    -- Read old messages.
+  R    -- Read all messages in reverse order.
+
+  .RE   -- Read Exclusive.
+  .RP   -- Read Public.
+  .RL   -- Read Limited access.
+
+  These commands read messages in the current room.  They can also be combined
+using .R options, for example:  ".RNR" (Read New Reverse) reads new messages
+in a reverse order.
+  You can stop output by pressing "S", pause it by pressing "P" (any key to
+continue), skip to the next message by typing "N", and skip to the next
+paragraph by pressing "J".
+
+ Entering Messages.
+
+ E    -- Enter message.
+ .EE  -- Enter Exclusive message.
+ .EG  -- Enter Group Only message.
+ .ELM -- Enter Limited Access Message.
+ .EO  -- Enter Old message.
+
+  The Enter Message command is used to create messages.
+
+  The Enter Exclusive message creates a private message.  Private messages
+can only be seen by the sender and recipient.
+
+  The Enter Group Only and Limited Access Message command also creates a
+message, but limits it to a particular group (you are prompted for a
+groupname, partial names are acceptable, and you must be a member of the
+group to create a message in it).
+
+  Enter Old message will recover any message you aborted, if you aborted the
+message the last time you entered a message during the current session.
+
+  Message Formatting.
+
+  Messages are formatted to the callers screen width.  As much text as possible
+will be collected on one line to send to the caller.  To defeat this, start
+a line with a space.  This is also useful for delineating paragraphs in
+your text.  Whenever you start a line with a space, that line will always
+start a new line, no matter where in the previous line the system is.
+Experiment in message entry using the Print command to see how this works.
+
+  Message Entry.
+
+  Message entry is very simple.  You just type text (no limit on line length)
+To end your message, press the carriage return key twice.  This will place
+you in message edit mode.  There are several commands.
+
+  The most important are: Replace String, Save Buffer, Abort Message,
+                          and Continue.
+
+ Related Topics
+
+ .h GROUP
+ .h ROOM
+ .h SPECIAL
+
+

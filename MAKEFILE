@@ -1,0 +1,237 @@
+#
+#       Citadel makefile for Borland C++
+#
+.autodepend
+#.swap
+
+REL=1.34
+RELDIR=\temp
+TARGETS=ccit.exe
+#
+#   ALL JOBS:
+#
+all: $(TARGETS)
+
+targets: $(TARGETS)
+
+#
+# rules for building object modules
+#
+
+CC    = bcc
+.c.obj:
+       bcc $(CFLAGS) -Qx -c -Fc -Ff=8192 -Y {$*.c }
+.asm.obj:
+       @tasm /z /zi $*;
+
+#
+# Options: (compile time and Defines)
+# CFLAGS= -v -d -w -G -N -O -Z -ml -DALPHA_TEST
+#
+# Most options in TURBOC.CFG file.
+#
+# NOTE:  Use one of these
+
+CFLAGS = -DALPHA_TEST -ml -I\usr\bc\include -DREL="$(REL)"
+# CFLAGS = -DBETA_TEST -ml -I\usr\bc\include -DREL="$(REL)"
+
+#
+# Options: (linker)
+#LFLAGS= /stack:12288 /NOIGNORECASE /E /F /SEGMENTS:256
+LFLAGS=/c /L\usr\bc\lib /s /yx
+#
+# the weirdness in the object stuff is for the sake of overlays..
+#
+SOBJ  = \
+aplic.obj \
+command.obj \
+config.obj \
+cron.obj \
+doenter.obj \
+dogoto.obj \
+doread.obj \
+edit.obj \
+files.obj \
+ibmcom.obj \
+idle.obj \
+info.obj \
+infofile.obj \
+log2.obj \
+log3.obj \
+machine.obj \
+misc2.obj \
+msg3.obj \
+music.obj \
+net.obj \
+roomb.obj \
+sysop1.obj \
+xmodem.obj \
+swap.obj \
+zipfile.obj
+
+OBJS  = \
+account.obj \
+ctdl.obj \
+dosysop.obj \
+doaide.obj \
+doupdown.obj \
+dochat.obj \
+format.obj \
+grphall.obj \
+ibmcom.obj \
+idle.obj \
+init.obj \
+input.obj \
+library.obj \
+log.obj \
+misc.obj \
+modem.obj \
+msg.obj \
+msg2.obj \
+output.obj \
+port.obj \
+rooma.obj \
+timedate.obj \
+version.obj \
+window.obj
+
+
+
+TCLIBL = c:\usr\bc\lib\EMU.LIB c:\usr\bc\lib\MATHL.lib c:\usr\bc\lib\CL.lib
+TCOBJ  = c:\usr\bc\lib\c0l.obj
+
+
+#finfo.exe: finfo\finfo.c finfo\finfo.h
+#        @cd $&
+# 			 @bcc $&.c
+#        @-tdstrip $&.exe
+#        @-pklite $&.exe
+#        @copy $&.exe ..
+#        @cd ..
+#
+#   FGRP.EXE
+#
+
+#fgrp.exe: fgrp\fgrp.c fgrp\fgrp.h
+#        @cd $&
+# 			 @bcc $&.c
+#        @-tdstrip $&.exe
+#        @-pklite $&.exe
+#        @copy $&.exe ..
+#        @cd ..
+#
+#   CCIT.EXE
+#
+
+ccit.exe: $(OBJS) $(SOBJ)
+        $(CC) -c $(CFLAGS) version.c
+        tlink $(LFLAGS) /o- @kernal.rsp /o+ @ovl.rsp,ccit.exe,\
+ccit.map,@libs.rsp
+
+# 	beep the speaker
+beep:
+				beep 1700
+
+#
+# kernal files
+#
+
+ctdl.obj: ctdl.c
+
+swap.obj: swap.asm
+     @tasm /w2 /m2 /mx /JMASM51 /zi /z /l /D_Large swap
+
+ibmcom.obj: ibmcom.c
+
+idle.obj: idle.c
+
+machine.obj: machine.c machine.h
+
+modem.obj: modem.c
+
+port.obj: port.c
+
+window.obj: window.c
+
+output.obj: output.c
+
+command.obj: command.c
+
+timedate.obj: timedate.c
+
+input.obj: input.c
+
+#
+# overlayed files
+#
+
+account.obj: account.c
+
+format.obj: format.c
+
+grphall.obj: grphall.c
+
+init.obj: init.c
+
+library.obj: library.c
+
+log.obj: log.c
+
+misc.obj: misc.c
+
+msg.obj: msg.c
+
+msg2.obj: msg2.c
+
+rooma.obj: rooma.c
+
+version.obj: version.c
+
+aplic.obj: aplic.c
+
+config.obj: config.c config.atm
+
+cron.obj: cron.c
+
+edit.obj: edit.c
+
+files.obj: files.c
+
+infofile.obj: infofile.c
+
+info.obj: info.c
+
+log2.obj: log2.c
+
+log3.obj: log3.c
+
+misc2.obj: misc2.c
+
+msg3.obj: msg3.c
+
+music.obj: music.c
+
+net.obj: net.c
+
+sysop1.obj: sysop1.c
+
+roomb.obj: roomb.c
+
+xmodem.obj: xmodem.c
+
+zipfile.obj: zipfile.c
+
+dosysop.obj: dosysop.c
+
+doaide.obj: doaide.c
+
+doupdown.obj: doupdown.c
+
+dochat.obj: dochat.c
+
+doenter.obj: doenter.c
+
+dogoto.obj: dogoto.c
+
+doread.obj: doread.c
+

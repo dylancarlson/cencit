@@ -1,0 +1,77 @@
+ 2HELP FILES0
+
+ 2--- General ---0
+
+ Download functions are available in special rooms called directory rooms.
+Directory rooms have a "]" after the roomname, rather than the normal ">"
+character.  The following commands are used to list files, to download them,
+or to upload files:
+
+
+ 2--- Listing files ---0
+
+ .RD  -- Read Directory
+ .RVD -- Read Verbose Directory
+ .RI  -- Read Infofile
+ .RVI -- Read Verbose Infofile
+ .RA  -- Read Archive
+ .RVA -- Read Archive
+
+ The Read Directory commands list the available files in the current room.
+This commands waits for an optional filename (possibly wildcarded, per
+UNIX filename conventions) and will restrict its output to those
+files selected.  The default is to list all of the files.
+ The Verbose option gives an extended listing with date, filesize in bytes and
+download time.
+ The info files are the same, but they include a comment on the file if
+one was entered during the upload.
+ The read archive command allows you to view the contents of a archive,
+normaly extended '.arc'.
+
+ 2--- Downloading files ---0
+ (Reciving files from DragCit)
+
+ .RT  -- Read Textfile
+ .RW  -- Read WC-Protocol
+ D    -- Download 
+
+ These commands download files.  Read Textfile will request a filename,
+file will be printed (as is) to you.  Read WC-Protocol will download a file 
+using XMODEM protocol, and the Download command will let you choose a 
+protocol. 
+ Note that with batch protocols you can specify multiple file names to
+download. You can also use UNIX wild cards (see the wild cards section below).
+
+ 2--- Uploading files ---0
+ (Sending files to DragCit)
+
+ .ET  -- Enter Textfile
+ .EW  -- Enter WC-Protocol
+ U    -- Upload 
+
+ These commands are the inverse of the above two download commands.  They
+actually create files on the local system.  After supplying the filename, you 
+will be asked to supply a brief comment describing the file.  You have about 
+60 characters.
+ Using the Limited-access flag will make it a hidden file.
+ Batch protocols will not prompt you for a file name, but will ask for 
+comments after the transfer for each of the files.
+ (Note:  You terminate a file in Enter Textfile with control-Z).
+
+ 2--- Wildcards ---0
+
+ DragCit supports UNIX style wild cards for file names.  These wildcards
+work like this:
+
+ * replaces any amount of charachters
+ ? replaces any one charachtres
+ [a-z] replaces a range of chrachters.
+
+ Leagal uses are:
+
+ *.c        [a-l]form.txt       version?.arc
+
+ 2--- Related Topics ---0
+
+ .h ROOM
+

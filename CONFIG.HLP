@@ -1,0 +1,23 @@
+ 2HELP CONFIG0
+
+ 2--- Reconfiguring ---0
+
+ "3.RC0"  -- Read Configuration
+ "3.EC0"  -- Enter Configuration
+
+ These commands let you inspect and change your configuration.  Read
+Configuration lists your current configuration, while Enter Configuration
+lets you change screen width, number of nulls, upper/lowercase, tabs,
+helpful hints and whether you are listed in the userlog or not.
+
+ 2--- Changing your Password ---0
+
+ "3.EP0"  -- Enter Password
+
+ This command lets you enter new initials and password.  Each of these
+can be up to nineteen characters long and contain any printable characters.
+
+ 2--- Related Topics ---0
+
+ .h SPECIAL
+

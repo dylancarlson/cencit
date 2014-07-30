@@ -1,0 +1,33 @@
+
+                  <<< Networking Across the Country >>>
+
+    In our efforts to expand our message base and public domain software,
+ The SysOps of Citadel have incorporated networking into their daily lives.
+ Any one of these boards may network with 1 to 30 boards daily.  This is all
+ automatic and controlled by some file set-ups.
+    By dialing in here reading and leaving messages, You will have access to
+ BBS's from Seattle to California, DC to Dallas.  The list has just started.
+ The Majority of the boards are in Seattle (where Citadel started),  But the
+ word is out and new boards are springing up all over the country.  Already
+ there are 13 boards in Texas netting with one in Dallas that is a central hub
+ to two or three BBS's in Seattle.
+   Centauri's Place is the only California connection so far. Messages and
+ software net to the other boards, although non-message movement is limited.
+ The numbers of the other boards on the network are provided in the help below.
+	 To send private mail to someone on another board,	enter .EE here and when
+ prompted for recipients name enter their name followed by @ and the board name
+ you see from their message. Example:
+			recipient:	Heather R. Scott @ Memory Alpha
+ 
+    To see the various networking charts:
+      
+      All nodes in the network      enter .H callnode
+      All nodes in Washinton        enter .H washnode
+      All nodes in Dallas           enter .H dallas
+      All the inter-connect nodes   enter .H intrnode
+
+      All the alias names           enter .H alias
+
+             Latest Revision on February 9th, 1991
+                      By Centauri               
+

@@ -1,0 +1,27 @@
+ .RB-y User:- Reads messages/userlog by specific user.
+ .RC-onfiguration:- Configurations setup.
+ .RD-irectory:- Lists out the directory of a directory room.
+ .RE-xclusive:- Reads exclusive mail.
+ .RF-orward:- Reads messages forward.
+ .RH-allways:- Lists out hallways.
+ .RI-nfo file:- Prints out file information.
+ .RL-imited:- If used with .rlm (read limited messages), reads only
+              specified limited access messages.
+              If used with .rlu (read limited userlog), reads only
+              specified limited access group userlog.
+ .RN-ew:- Reads new messages.
+ .RO-ld:- Reads old messages only.
+ .RP-ublic:- Reads public messages only.
+ .RR-everse:- Reads messages in reverse order.
+ .RS-tatus:- Lists out information on system and software.
+ .RT-extfile:- Prints out file in directory rooms.
+ .RU-serlog:- List users of system.
+ .RV-erbose:- If entered with .rvm (read verbose messages) prints out
+              message number.
+              If entered with .rvu (read verbose userlog) prints out
+              all information of users.
+ .RW-C-Protocol:- Enters download (Xmodem internal protocol) for
+                  downloading a file
+ .RZ-IP-file:- Reads ZIP-file in directory.
+ .R?:- Prints the file (readopt.mnu).
+

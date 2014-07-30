@@ -1,0 +1,40 @@
+account.obj +
+ibmcom.obj +
+ctdl.obj +
+format.obj +
+grphall.obj +
+input.obj +
+init.obj +
+library.obj +
+log.obj +
+misc.obj +
+modem.obj +
+msg.obj +
+msg2.obj +
+output.obj +
+port.obj +
+rooma.obj +
+timedate.obj +
+version.obj +
+video.obj +
+window.obj +
+aplic.obj +
+config.obj +
+cron.obj +
+edit.obj +
+files.obj +
+infofile.obj +
+info.obj +
+log2.obj +
+log3.obj +
+misc2.obj +
+msg3.obj +
+net.obj +
+sysop1.obj +
+roomb.obj +
+xmodem.obj +
+zipfile.obj
+ccit.exe
+ccit.map
+c:\usr\bc\lib\EMU.LIB c:\usr\bc\lib\MATHL.lib c:\usr\bc\lib\CL.lib
+

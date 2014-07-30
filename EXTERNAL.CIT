@@ -1,0 +1,144 @@
+ external.cit
+ #PROTOCOL: External file transfer protocols
+  Protocol name (first letter must be unique)
+  Batch (1=yes, 0=no)
+  Block size  (0 if you dont know or it is variable)
+
+  Recieve command, either a batch file or a direct call w/ arguments
+      using %a you get the applic path, %p gives you the port, %s
+      gives you the baud rate and %f is the file(s)
+
+  Send command, see recieve command
+
+  You don't have to use Omen Technologies DSZ program, but hey, it's
+  everyone's favorite around here!
+
+#PROTOCOL "CRC-Xmodem"   0 0 128  "%a\\dsz port %p D rx -c %f"          "%a\\dsz port %p D sx %f"
+#PROTOCOL "Xmodem"       0 0 128  "%a\\dsz port %p D rx %f"             "%a\\dsz port %p D sx %f"
+#PROTOCOL "RLE-Zmodem"   0 1 0    "%a\\dsz port %p D restrict rz -Z %f" "%a\\dsz port %p D sz -Z %f"
+#PROTOCOL "Y-Batch"      0 1 128  "%a\\dsz port %p D restrict rb %f"    "%a\\dsz port %p D sb %f"
+#PROTOCOL "Zmodem"       0 1 0    "%a\\dsz port %p D %f"                "%a\\dsz port %p D sz %f"
+#PROTOCOL "1K-X"         0 0 1024 "%a\\dsz port %p D rx -k %f"          "%a\\dsz port %p D sx -k %f"
+#PROTOCOL "4K-Z"         0 1 0    "%a\\dsz port %p D rz -w %f"          "%a\\dsz port %p D sz -w %f"
+#PROTOCOL "Moby Turbo"   0 1 0    "%a\\dsz port %p D restrict rz -m %f" "%a\\dsz port %p D sz -m %f"
+#PROTOCOL "QuickNet"     1 1 0    "@$w %a\\qnet_r %p %a %f"             "@$%a\\qnet_s %p %a %f"
+#PROTOCOL "LocalNet"     1 1 0    "@$%a\\local_r %p %f %n"           "@$%a\\local_s %p %f %n"
+ # Meaning               | | |block 0=unknown
+ #                       | |batch
+ #                       |Console/Network Only Protocol
+
+ external editors
+ Name of editor (first character must be different)
+ Console only (= 1)
+ name of batch file (%f = filename to edit)
+
+ #EDITOR	 "Jive Message"      0  "@$jivemsg"
+ #EDITOR	 "Valley Talk"       0  "@$valmsg"
+ #EDITOR	 "QEdit (local)"     1  "@q %f"
+ #EDITOR	 "Text QEdit"        1  "@qt %f"
+ #EDITOR	 "Ed Norton Editor"  1  "@ed %f"
+
+
+ Unaccessable directories
+ Anything specified here can not be created as a directory from remote*
+ any attempt to do so from remote causes the offending sysop's account*
+ to be desysoped, deaided, and unverified. A message is posted in the
+ aide room to let you know what happened.
+ Un*x style wild cards can be used. ( '[' and ']', more than one
+   ext.
+
+#DIRECTORY C:\
+#DIRECTORY C:\dos
+#DIRECTORY C:\fastback
+#DIRECTORY C:\dos\util
+#DIRECTORY C:\dos\norton
+#DIRECTORY C:\turboc
+#DIRECTORY C:\ccit
+#DIRECTORY ..
+
+                You can now add your own commands, or change the ones
+                already there!
+
+        Added external commands.  To use, attach a line to external.cit for
+        each command you want to add to the system.  The commands can be used
+        to replace the normal commad letters, such as Read or Enter, so be
+        careful.  Commands can be console only, or both console and modem.
+        The command line itself has the same options as the upload/download
+        entry in EXTERNAL.CIT.  Here's what I added to make qedit (qe in my
+        path) work whenever I pressed "Q" from the command line.
+
+        to run FLIB from the 1 key:
+
+ #EXTERNAL   "1 Library"      0       "@flib"
+
+        The format for external commands is:
+
+            #EXTERNAL   <name>  <console only flag> <command line>
+
+        Notice that this is pretty much the same as the editor commands.
+        Added #ADCHANCE and #ADTIME settings for EXTERNAL.CIT
+
+        #ADCHANCE is the chance of an ad appearing at the command
+        (room) prompt.  Use whole numbers in the range of 0-100.  0
+        disables random ads.
+
+        #ADTIME is the number of seconds of idle time before an ad is
+        shown.  Use whole numbers in the range of 0-100.  0
+        disables timeout ads.
+
+        I recomend either a very low ad percentage (1-5%) or a large number
+        of ad files (like AD.BLB-AD20.BLB), to prevent user annoyance.
+        Along the same vein, try not to have too many long ads. For
+        example, you could have these lines in your exteral.cit:
+
+#ADCHANCE  5
+#ADTIME   40
+
+        Making the user see an ad 5% of the time after a command, and
+        automaticly if they sit idle for 40 seconds.
+
+        Remember: ANSI drawings can be placed in any .BL@ files.  I find
+        that TheDraw works well for creating these.  You can include IBM
+        Graphics characters (line drawings and such) in any .BLB file.
+        Color control codes, motion controls, etc. can be used in the .BL@
+        files.
+
+								SysOp Configurable Chat Bell
+
+				The Chat Bell can be changed to suit your own personal preferences.
+				It is still disabled with the F7 key, however, when it is on, you
+				may have a sound you like better than the default.
+
+				#CHATBELLTYPE is the type of sound that will play.
+				The types are:
+						1 		Bell					5  double 	 9	triple
+						2 		slide up			6  double 	10	triple
+						3 		slide down		7  double 	11	triple
+						4 		siren 				8  double 	12	triple
+
+				#CHATBELLHI is the highest frequency to be used in the types above.
+				#CHATBELLLO is the lowest frequency to be used in the types above.
+				#CHATBELLINCR is the amount to change the frequency in types 2-4.
+				#CHATBELLDELAY1 is the time in milliseconds that the sound should
+				be on.
+				#CHATBELLDELAY2 is the time in milliseconds that the sound should
+				be off in-between cycles.
+					 Be sure to use snd.com to try this stuff out.
+
+
+#CHATBELLTYPE 	5
+#CHATBELLHI 		1012
+#CHATBELLLO 		774
+#CHATBELLINCR 	50
+#CHATBELLDELAY1 69
+#CHATBELLDELAY2 5
+
+
+
+				Default group to place .EG or .EL style net messages in, when the
+        original group isn't known on your BBS.
+
+#GROUP "Treks"
+
+#DEFAULT_GROUP "Private"
+
